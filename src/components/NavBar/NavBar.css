@@ -1,0 +1,9 @@
+.indicator {
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(25%, 25%);
+}
