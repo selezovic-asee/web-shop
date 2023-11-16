@@ -6,7 +6,8 @@ const Store = () => {
   const { data, error, isLoading } = useShoppingCart();
   return (
     <>
-      <h1>Store</h1>
+      <h1 className="d-flex justify-content-center">Store page</h1>
+      <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>
       )}

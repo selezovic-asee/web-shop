@@ -17,6 +17,7 @@ interface ShoppingCartContextType {
   login: () => void;
   logOut: () => void;
   profile: any;
+  user: any[];
 }
 
 const ShoppingCartContext = React.createContext<ShoppingCartContextType>(

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import NavBar from "./components/NavBar/NavBar";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import LogIn from "./pages/LogIn";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Container className="mb-4">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/store" element={<Store />} />
+          </Route>
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<LogIn />} />
         </Routes>

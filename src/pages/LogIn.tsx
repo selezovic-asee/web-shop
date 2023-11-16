@@ -6,7 +6,7 @@ const LogIn = () => {
 
   return (
     <div className="d-flex align-items-center flex-column">
-      <h2>Web Shop</h2>
+      <h2>Login page</h2>
       <br />
       <br />
       {profile ? (
@@ -28,9 +28,14 @@ const LogIn = () => {
         </div>
       ) : (
         <>
-          <p>Please log in to be able to purchase the listed items.</p>
+          <p>
+            Please log in to be able to purchase the listed items in our store
+            shop.
+          </p>
           <br />
-          <Button onClick={() => login()}>Sign in with Google</Button>
+          <Button id="login" onClick={() => login()}>
+            Sign in with Google
+          </Button>
         </>
       )}
     </div>
