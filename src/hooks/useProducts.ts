@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import userService, { Product } from "../services/user-service";
 
 const useProducts = () => {
-    const [data, setData] = useState<Product[]>([]);
+  const [data, setData] = useState<Product[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
 

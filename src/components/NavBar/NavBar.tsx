@@ -19,6 +19,9 @@ const NavBar = () => {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
+          <Nav.Link to="/login" as={NavLink}>
+            Log in
+          </Nav.Link>
         </Nav>
         {cartQuantity > 0 && (
           <Button

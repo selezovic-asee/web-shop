@@ -14,6 +14,9 @@ interface ShoppingCartContextType {
   data: Product[];
   error: string;
   isLoading: boolean;
+  login: () => void;
+  logOut: () => void;
+  profile: any;
 }
 
 const ShoppingCartContext = React.createContext<ShoppingCartContextType>(
