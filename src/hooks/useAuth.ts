@@ -1,5 +1,9 @@
+import useShoppingCart from "./useShoppingCart";
 
-const useAuth = (user: any[], profile: any[]) => {
+const useAuth = () => {
+    const { profile, user } = useShoppingCart();
     return user && profile;
+  };
 
-}
+  export default useAuth;
+

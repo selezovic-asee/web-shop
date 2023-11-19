@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import LogIn from "./pages/LogIn";
 import ProtectedRoutes from "./components/ProtectedRoutes";
+import User from "./pages/User";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoutes />}>
             <Route path="/store" element={<Store />} />
+            <Route path="/user" element={<User />} />
           </Route>
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<LogIn />} />

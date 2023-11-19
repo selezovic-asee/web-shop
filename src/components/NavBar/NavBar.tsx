@@ -2,9 +2,11 @@ import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
+import useAuth from "../../hooks/useAuth";
 
 const NavBar = () => {
-  const { openCart, cartQuantity } = useShoppingCart();
+  const { openCart, cartQuantity, profile } = useShoppingCart();
+  const isAuth = useAuth();
 
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
@@ -19,11 +21,18 @@ const NavBar = () => {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
-          <Nav.Link to="/login" as={NavLink}>
-            Log in
-          </Nav.Link>
+          {!profile && (
+            <Nav.Link to="/login" as={NavLink}>
+              Log in
+            </Nav.Link>
+          )}
+          {profile && (
+            <Nav.Link to="/user" as={NavLink}>
+              User
+            </Nav.Link>
+          )}
         </Nav>
-        {cartQuantity > 0 && (
+        {cartQuantity > 0 && isAuth && (
           <Button
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}

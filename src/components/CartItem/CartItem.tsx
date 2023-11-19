@@ -1,5 +1,5 @@
-import useShoppingCart from "../../hooks/useShoppingCart";
 import { Button, Stack } from "react-bootstrap";
+import useShoppingCart from "../../hooks/useShoppingCart";
 import formatCurrency from "../../utilities/formatCurrency";
 import "./CartItem.css";
 
@@ -40,3 +40,6 @@ const CartItem = ({ id, quantity }: Props) => {
 };
 
 export default CartItem;
+function useAuthentication() {
+  throw new Error("Function not implemented.");
+}

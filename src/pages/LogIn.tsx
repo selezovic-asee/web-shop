@@ -1,42 +1,27 @@
 import { Button } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
+import { Navigate } from "react-router-dom";
 
 const LogIn = () => {
-  const { logOut, login, profile } = useShoppingCart();
+  const { login, profile } = useShoppingCart();
 
   return (
-    <div className="d-flex align-items-center flex-column">
-      <h2>Login page</h2>
-      <br />
-      <br />
-      {profile ? (
-        <div>
-          <img
-            className="rounded-circle"
-            src={profile.picture}
-            alt="user image"
-          />
+    <div>
+      {!profile ? (
+        <div className="d-flex align-items-center flex-column">
+          <h2>Login page</h2>
           <br />
           <br />
-          <br />
-          <h4>User:</h4>
-          <p>Name: {profile.name}</p>
-          <p>Email Addres: {profile.email}</p>
-          <br />
-          <br />
-          <Button onClick={logOut}>Log out</Button>
+          <>
+            <p>Please log in to be able to buy items in our shop.</p>
+            <br />
+            <Button id="login" onClick={() => login()}>
+              Sign in with Google
+            </Button>
+          </>
         </div>
       ) : (
-        <>
-          <p>
-            Please log in to be able to purchase the listed items in our store
-            shop.
-          </p>
-          <br />
-          <Button id="login" onClick={() => login()}>
-            Sign in with Google
-          </Button>
-        </>
+        <Navigate to="/user" />
       )}
     </div>
   );

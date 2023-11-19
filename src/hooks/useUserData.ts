@@ -15,8 +15,9 @@ const useUserData = () => {
     onError: (error) => console.log("Login Failed", error),
   });
 
+
   useEffect(() => {
-    const button = document.getElementById('login');
+    // const button = document.getElementById('login');
 
     if (user) {
       axios
@@ -31,8 +32,9 @@ const useUserData = () => {
         )
         .then((res) => setProfile(res.data))
         .catch((err) => console.log(err));
-    }
-  }, [user]);
+      }
+    }, [user]);
+    
 
   const logOut = () => {
     googleLogout();
