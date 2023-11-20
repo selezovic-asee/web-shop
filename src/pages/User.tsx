@@ -5,7 +5,7 @@ const User = () => {
   const { profile, logOut } = useShoppingCart();
 
   return (
-    <div>
+    <div className="d-flex align-items-center flex-column">
       <img className="rounded-circle" src={profile.picture} alt="user image" />
       <br />
       <br />

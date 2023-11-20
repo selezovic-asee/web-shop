@@ -17,7 +17,6 @@ const useUserData = () => {
 
 
   useEffect(() => {
-    // const button = document.getElementById('login');
 
     if (user) {
       axios
@@ -32,6 +31,7 @@ const useUserData = () => {
         )
         .then((res) => setProfile(res.data))
         .catch((err) => console.log(err));
+        
       }
     }, [user]);
     

@@ -28,7 +28,7 @@ const NavBar = () => {
           )}
           {profile && (
             <Nav.Link to="/user" as={NavLink}>
-              User
+              Account
             </Nav.Link>
           )}
         </Nav>
