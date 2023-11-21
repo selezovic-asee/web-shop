@@ -18,8 +18,8 @@ const NavBar = () => {
           <Nav.Link to="/store" as={NavLink}>
             Store
           </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
-            About
+          <Nav.Link to="/trending" as={NavLink}>
+            Trending
           </Nav.Link>
           {!profile && (
             <Nav.Link to="/login" as={NavLink}>
