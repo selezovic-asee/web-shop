@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
 
-const User = () => {
+const Account = () => {
   const { profile, logOut } = useShoppingCart();
 
   return (
@@ -20,4 +20,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Account;

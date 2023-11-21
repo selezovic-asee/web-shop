@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import LogIn from "./pages/LogIn";
 import ProtectedRoutes from "./components/ProtectedRoutes";
-import User from "./pages/User";
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/trending" element={<Trending />} />
           <Route element={<ProtectedRoutes />}>
             <Route path="/store" element={<Store />} />
-            <Route path="/user" element={<User />} />
+            <Route path="/account" element={<Account />} />
           </Route>
           <Route path="/login" element={<LogIn />} />
         </Routes>

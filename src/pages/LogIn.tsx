@@ -21,7 +21,7 @@ const LogIn = () => {
           </>
         </div>
       ) : (
-        <Navigate to="/user" />
+        <Navigate to="/account" />
       )}
     </div>
   );
