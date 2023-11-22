@@ -1,4 +1,6 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 import { NavLink } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
@@ -10,8 +12,17 @@ const NavBar = () => {
 
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
-      <Container>
-        <Nav className="me-auto">
+      <DropdownButton
+        id="dropdown-item-button"
+        title="Category"
+        className="dropdown-button"
+      >
+        <Dropdown.Item as="button">Smartphones</Dropdown.Item>
+        <Dropdown.Item as="button">Laptops</Dropdown.Item>
+        <Dropdown.Item as="button">Fragrances</Dropdown.Item>
+      </DropdownButton>
+      <Container className="d-flex justify-content-center">
+        <Nav>
           <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>

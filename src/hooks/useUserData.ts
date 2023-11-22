@@ -4,11 +4,7 @@ import { useState, useEffect } from "react";
 
 const useUserData = () => {
     const [user, setUser] = useState<any>([]);
-  const [profile, setProfile] = useState<any>({
-    name: "",
-    email: "",
-    picture: "",
-  });
+  const [profile, setProfile] = useState<any | null>(null);
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),

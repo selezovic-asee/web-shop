@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Home from "./pages/Home/Home";
 import Store from "./pages/Store";
-import Trending from "./pages/Trending";
+import Trending from "./pages/Trending/Trending";
 import NavBar from "./components/NavBar/NavBar";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import LogIn from "./pages/LogIn";
