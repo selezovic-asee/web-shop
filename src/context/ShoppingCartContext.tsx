@@ -1,6 +1,6 @@
 import React from "react";
-import { Product } from "../services/user-service";
 import { CartItem } from "../hooks/useContextValues";
+import { Product } from "../hooks/useProducts";
 
 interface ShoppingCartContextType {
   openCart: () => void;

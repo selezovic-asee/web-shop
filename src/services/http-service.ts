@@ -4,8 +4,6 @@ interface FetchResponse<T> {
     products: T[];
   }
   
-  
-  
 
 class HttpService {
     endpoint: string;

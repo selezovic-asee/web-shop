@@ -1,23 +1,15 @@
 import { CanceledError } from "axios";
 import { useState, useEffect } from "react";
-import productService from "../services/product-service";
+import smartphoneService from "../services/smartphon-service";
 
-
-export interface Product {
-  id: number;
-  title: string;
-  price: number;
-  images: string[];
-}
-
-const useProducts = () => {
-  const [products, setData] = useState<Product[]>([]);
+const useProductData = <T>() => {
+    const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    const { request, cancel } = productService.getAll<Product>();
+    const { request, cancel } = smartphoneService.getAll<T>();
     request
       .then((res) => {
         setData(res.data.products);
@@ -32,7 +24,7 @@ const useProducts = () => {
     return () => cancel();
   }, []);
 
-  return { data: products, error, isLoading }
-}
+  return { data, error, isLoading }
+};
 
-export default useProducts;
+export default useProductData;

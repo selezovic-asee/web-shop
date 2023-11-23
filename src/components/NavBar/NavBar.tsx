@@ -17,11 +17,15 @@ const NavBar = () => {
         title="Category"
         className="dropdown-button"
       >
-        <Dropdown.Item as="button">Smartphones</Dropdown.Item>
+        <Nav>
+          <Nav.Link to="/smartphones" as={NavLink}>
+            Smartphones
+          </Nav.Link>
+        </Nav>
         <Dropdown.Item as="button">Laptops</Dropdown.Item>
         <Dropdown.Item as="button">Fragrances</Dropdown.Item>
       </DropdownButton>
-      <Container className="d-flex justify-content-center">
+      <Container className="margin-auto">
         <Nav>
           <Nav.Link to="/" as={NavLink}>
             Home

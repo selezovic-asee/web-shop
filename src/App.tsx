@@ -8,6 +8,7 @@ import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import LogIn from "./pages/LogIn";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Account from "./pages/Account";
+import SmartphonesList from "./pages/SmartphonesList";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/account" element={<Account />} />
           </Route>
           <Route path="/login" element={<LogIn />} />
+          <Route path="/smartphones" element={<SmartphonesList />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>

@@ -1,12 +1,13 @@
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useShoppingCart from "../hooks/useShoppingCart";
+import useProductData from "../hooks/useProductData";
+import { Product } from "../hooks/useProducts";
 
-const Store = () => {
-  const { data, error, isLoading } = useShoppingCart();
+const SmartphonesList = () => {
+  const { data, isLoading, error } = useProductData<Product>();
   return (
     <>
-      <h1 className="d-flex justify-content-center">Shop</h1>
+      <h1 className="d-flex justify-content-center">Smartphones</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>
@@ -21,4 +22,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default SmartphonesList;
