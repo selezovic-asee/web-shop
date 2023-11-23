@@ -1,12 +1,12 @@
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useShoppingCart from "../hooks/useShoppingCart";
+import useLaptops from "../hooks/useLaptops";
 
-const Category = () => {
-  const { data, error, isLoading } = useShoppingCart();
+const LaptopsList = () => {
+  const { data, isLoading, error } = useLaptops();
   return (
     <>
-      <h1 className="d-flex justify-content-center">Category page</h1>
+      <h1 className="d-flex justify-content-center">Laptops</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>
@@ -20,3 +20,5 @@ const Category = () => {
     </>
   );
 };
+
+export default LaptopsList;

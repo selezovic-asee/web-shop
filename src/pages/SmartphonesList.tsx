@@ -1,10 +1,9 @@
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useProductData from "../hooks/useProductData";
-import { Product } from "../hooks/useProducts";
+import useSmartphones from "../hooks/useSmartphones";
 
 const SmartphonesList = () => {
-  const { data, isLoading, error } = useProductData<Product>();
+  const { data, isLoading, error } = useSmartphones();
   return (
     <>
       <h1 className="d-flex justify-content-center">Smartphones</h1>

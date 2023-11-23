@@ -1,16 +1,25 @@
 import { CanceledError } from "axios";
-import { useState, useEffect } from "react";
-import smartphoneService from "../services/smartphon-service";
+import { useEffect, useState } from "react";
+import apiClient from "../services/api-client";
 
-const useProductData = <T>() => {
-    const [data, setData] = useState<T[]>([]);
+interface FetchResponse<T> {
+  products: T[];
+}
+
+const useData = <T>(endpoint: string) => {
+  const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     setLoading(true);
-    const { request, cancel } = smartphoneService.getAll<T>();
-    request
+    
+    apiClient
+    .get<FetchResponse<T>>(endpoint, {
+      signal: controller.signal
+    })
       .then((res) => {
         setData(res.data.products);
         setLoading(false);
@@ -21,10 +30,10 @@ const useProductData = <T>() => {
         setLoading(false);
       });
 
-    return () => cancel();
+    return () => controller.abort();
   }, []);
 
   return { data, error, isLoading }
-};
+}
 
-export default useProductData;
+export default useData;

@@ -22,7 +22,11 @@ const NavBar = () => {
             Smartphones
           </Nav.Link>
         </Nav>
-        <Dropdown.Item as="button">Laptops</Dropdown.Item>
+        <Nav>
+          <Nav.Link to="/laptops" as={NavLink}>
+            Laptops
+          </Nav.Link>
+        </Nav>
         <Dropdown.Item as="button">Fragrances</Dropdown.Item>
       </DropdownButton>
       <Container className="margin-auto">

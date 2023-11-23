@@ -1,9 +1,9 @@
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useShoppingCart from "../hooks/useShoppingCart";
+import useProducts from "../hooks/useProducts";
 
 const Store = () => {
-  const { data, error, isLoading } = useShoppingCart();
+  const { data, error, isLoading } = useProducts();
   return (
     <>
       <h1 className="d-flex justify-content-center">Shop</h1>

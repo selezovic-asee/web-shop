@@ -9,6 +9,7 @@ import LogIn from "./pages/LogIn";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Account from "./pages/Account";
 import SmartphonesList from "./pages/SmartphonesList";
+import LaptopsList from "./pages/LaptopsList";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Route>
           <Route path="/login" element={<LogIn />} />
           <Route path="/smartphones" element={<SmartphonesList />} />
+          <Route path="/laptops" element={<LaptopsList />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>
