@@ -1,3 +1,5 @@
+import { Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./Home.css";
 
@@ -16,7 +18,17 @@ const Home = () => {
                 <h1 className="pt-5">
                   Make your loved ones happy with imaginative gifts!
                 </h1>
-                <button className="btn1 mt-3">More Tips</button>
+                <button type="button" className="btn btn-primary mt-4">
+                  <Nav variant="white">
+                    <Nav.Link
+                      to="/store"
+                      as={NavLink}
+                      style={{ color: "white" }}
+                    >
+                      I want to go shopping!
+                    </Nav.Link>
+                  </Nav>
+                </button>
               </div>
             </div>
           </div>
