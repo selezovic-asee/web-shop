@@ -1,10 +1,9 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
-import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
-import useAuth from "../../hooks/useAuth";
 
 const NavBar = () => {
   const { openCart, cartQuantity, profile } = useShoppingCart();
@@ -17,17 +16,29 @@ const NavBar = () => {
         title="Category"
         className="dropdown-button"
       >
-        <Nav>
+        <Nav className="d-flex flex-column">
           <Nav.Link to="/smartphones" as={NavLink}>
             Smartphones
           </Nav.Link>
-        </Nav>
-        <Nav>
           <Nav.Link to="/laptops" as={NavLink}>
             Laptops
           </Nav.Link>
+          <Nav.Link to="/fragnances" as={NavLink}>
+            Fragnances
+          </Nav.Link>
+          <Nav.Link to="/skincare" as={NavLink}>
+            Skincare
+          </Nav.Link>
+          <Nav.Link to="/groceries" as={NavLink}>
+            Groceries
+          </Nav.Link>
+          <Nav.Link to="/sunglasses" as={NavLink}>
+            Sunglasses
+          </Nav.Link>
+          <Nav.Link to="/automotive" as={NavLink}>
+            Automotive
+          </Nav.Link>
         </Nav>
-        <Dropdown.Item as="button">Fragrances</Dropdown.Item>
       </DropdownButton>
       <Container className="margin-auto">
         <Nav>

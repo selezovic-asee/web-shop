@@ -1,4 +1,4 @@
-import useData from "./useProductData";
+import useProductData from "./useProductData";
 
 export interface Product {
   id: number;
@@ -7,6 +7,6 @@ export interface Product {
   images: string[];
 }
 
-const useProducts = () => useData<Product>("/products?skip=5&limit=100");
+const useProducts = () => useProductData<Product>("/products?skip=5&limit=100");
 
 export default useProducts;

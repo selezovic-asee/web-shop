@@ -1,6 +1,6 @@
-import useData from "./useProductData";
+import useProductData from "./useProductData";
 import { Product } from "./useProducts";
 
-const useSmartphones = () => useData<Product>('/products/category/smartphones');
+const useSmartphones = () => useProductData<Product>('/products/category/smartphones');
 
 export default useSmartphones;

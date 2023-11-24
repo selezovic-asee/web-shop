@@ -6,7 +6,7 @@ interface FetchResponse<T> {
   products: T[];
 }
 
-const useData = <T>(endpoint: string) => {
+const useProductData = <T>(endpoint: string) => {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
@@ -36,4 +36,4 @@ const useData = <T>(endpoint: string) => {
   return { data, error, isLoading }
 }
 
-export default useData;
+export default useProductData;
