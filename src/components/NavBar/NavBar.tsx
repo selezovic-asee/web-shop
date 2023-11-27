@@ -52,7 +52,7 @@ const NavBar = () => {
             Trending
           </Nav.Link>
           {!profile && (
-            <Nav.Link to="/login" as={NavLink}>
+            <Nav.Link to="/myAccount" as={NavLink}>
               My account
             </Nav.Link>
           )}

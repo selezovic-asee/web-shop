@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
 import { Navigate } from "react-router-dom";
 
-const LogIn = () => {
+const MyAccount = () => {
   const { login, profile, isLoading } = useShoppingCart();
 
   return (
@@ -30,7 +30,7 @@ const LogIn = () => {
               as well as review previous orders.
             </p>
             <br />
-            <Button id="login" onClick={() => login()}>
+            <Button id="myAccount" onClick={() => login()}>
               Sign in with Google
             </Button>
           </>
@@ -42,4 +42,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default MyAccount;

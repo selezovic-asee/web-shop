@@ -4,7 +4,7 @@ import useAuth from "../hooks/useAuth";
 const ProtectedRoutes = () => {
   const isAuth = useAuth();
 
-  return isAuth ? <Outlet /> : <Navigate to="/login" />;
+  return isAuth ? <Outlet /> : <Navigate to="/myAccount" />;
 };
 
 export default ProtectedRoutes;

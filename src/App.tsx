@@ -8,7 +8,7 @@ import FragrancesList from "./pages/FragrancesList";
 import GroceriesList from "./pages/GroceriesList";
 import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
-import LogIn from "./pages/LogIn";
+import MyAccount from "./pages/MyAccount";
 import SkincareList from "./pages/SkincareList";
 import MotorcycleList from "./pages/SmartphonesList";
 import Store from "./pages/Store";
@@ -29,7 +29,7 @@ function App() {
           <Route element={<ProtectedRoutes />}>
             <Route path="/account" element={<Account />} />
           </Route>
-          <Route path="/login" element={<LogIn />} />
+          <Route path="/myAccount" element={<MyAccount />} />
           <Route path="/motorcycle" element={<MotorcycleList />} />
           <Route path="/laptops" element={<LaptopsList />} />
           <Route path="/fragnances" element={<FragrancesList />} />
