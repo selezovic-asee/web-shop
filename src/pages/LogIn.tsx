@@ -17,11 +17,18 @@ const LogIn = () => {
       )}
       {!profile ? (
         <div className="d-flex align-items-center flex-column">
-          <h2>Login page</h2>
+          <h2>Login to the user account.</h2>
           <br />
           <br />
           <>
-            <p>Please log in to be able to buy items in our shop.</p>
+            <p>
+              Registering allows you to make purchases/orders faster and easier,
+              <br />
+              change your data, as well as review and monitor the status of your
+              orders,
+              <br />
+              as well as review previous orders.
+            </p>
             <br />
             <Button id="login" onClick={() => login()}>
               Sign in with Google

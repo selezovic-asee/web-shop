@@ -40,6 +40,7 @@ const StoreItem = ({ id, title, price, images: imgUrl }: Product) => {
                   <span className="fs-3">{quantity}</span> in cart
                 </div>
                 <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                <span>{id}</span>
               </div>
               <Button
                 onClick={() => removeFromCart(id)}
