@@ -4,13 +4,14 @@ import { NavLink } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
 import useAuth from "../../hooks/useAuth";
+import ColorModeSwitch from "../ColorModeSwitch";
 
 const NavBar = () => {
   const { openCart, cartQuantity, profile } = useShoppingCart();
   const isAuth = useAuth();
 
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+    <NavbarBs sticky="top" className="bg-light shadow-sm mb-3">
       <DropdownButton
         id="dropdown-item-button"
         title="Category"
@@ -62,7 +63,7 @@ const NavBar = () => {
             </Nav.Link>
           )}
         </Nav>
-        <div className="d-flex">
+        <div className="d-flex" style={{ color: "black" }}>
           {isAuth && (
             <p className="d-flex align-items-center mb-0 me-3">
               Hello {profile.given_name}!
@@ -73,7 +74,7 @@ const NavBar = () => {
               onClick={openCart}
               style={{ width: "3rem", height: "3rem", position: "relative" }}
               variant="outline-primary"
-              className="rounded-circle"
+              className="rounded-circle me-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +88,12 @@ const NavBar = () => {
               </div>
             </Button>
           ) : (
-            <span style={{ width: "48px", height: "48px" }}></span>
+            <span
+              className="me-2"
+              style={{ width: "48px", height: "48px" }}
+            ></span>
           )}
+          <ColorModeSwitch />
         </div>
       </Container>
     </NavbarBs>
