@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
 import LogIn from "./pages/LogIn";
 import SkincareList from "./pages/SkincareList";
-import SmartphonesList from "./pages/SmartphonesList";
+import MotorcycleList from "./pages/SmartphonesList";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
@@ -30,7 +30,7 @@ function App() {
             <Route path="/account" element={<Account />} />
           </Route>
           <Route path="/login" element={<LogIn />} />
-          <Route path="/smartphones" element={<SmartphonesList />} />
+          <Route path="/motorcycle" element={<MotorcycleList />} />
           <Route path="/laptops" element={<LaptopsList />} />
           <Route path="/fragnances" element={<FragrancesList />} />
           <Route path="/skincare" element={<SkincareList />} />

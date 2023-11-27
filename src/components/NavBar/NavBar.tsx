@@ -17,9 +17,6 @@ const NavBar = () => {
         className="dropdown-button"
       >
         <Nav className="d-flex flex-column">
-          <Nav.Link to="/smartphones" as={NavLink}>
-            Smartphones
-          </Nav.Link>
           <Nav.Link to="/laptops" as={NavLink}>
             Laptops
           </Nav.Link>
@@ -37,6 +34,9 @@ const NavBar = () => {
           </Nav.Link>
           <Nav.Link to="/automotive" as={NavLink}>
             Automotive
+          </Nav.Link>
+          <Nav.Link to="/motorcycle" as={NavLink}>
+            Motorcycle
           </Nav.Link>
         </Nav>
       </DropdownButton>
