@@ -40,6 +40,6 @@ const CartItem = ({ id, quantity }: Props) => {
 };
 
 export default CartItem;
-function useAuthentication() {
-  throw new Error("Function not implemented.");
-}
+// function useAuthentication() {
+//   throw new Error("Function not implemented.");
+// }

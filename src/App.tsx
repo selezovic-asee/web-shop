@@ -15,6 +15,7 @@ import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
 import AutomotiveList from "./pages/AutomotiveList";
+import NoPage from "./pages/NoPage";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
+          <Route path="/store" element={<Store />} />
           <Route element={<ProtectedRoutes />}>
-            <Route path="/store" element={<Store />} />
             <Route path="/account" element={<Account />} />
           </Route>
           <Route path="/login" element={<LogIn />} />
@@ -36,6 +37,7 @@ function App() {
           <Route path="/groceries" element={<GroceriesList />} />
           <Route path="/sunglasses" element={<SunglassesList />} />
           <Route path="/automotive" element={<AutomotiveList />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>

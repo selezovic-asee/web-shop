@@ -9,7 +9,12 @@ const Home = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="spinner-border"></div>
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "600px" }}
+        >
+          <div className="spinner-border"></div>
+        </div>
       ) : (
         <div className="home">
           <div className="container py-5">

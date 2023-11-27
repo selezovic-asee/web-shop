@@ -3,10 +3,18 @@ import useShoppingCart from "../hooks/useShoppingCart";
 import { Navigate } from "react-router-dom";
 
 const LogIn = () => {
-  const { login, profile } = useShoppingCart();
+  const { login, profile, isLoading } = useShoppingCart();
 
   return (
     <div>
+      {isLoading && (
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "600px" }}
+        >
+          <div className="spinner-border"></div>
+        </div>
+      )}
       {!profile ? (
         <div className="d-flex align-items-center flex-column">
           <h2>Login page</h2>
