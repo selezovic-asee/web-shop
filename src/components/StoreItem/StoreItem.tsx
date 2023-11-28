@@ -15,7 +15,7 @@ const StoreItem = ({ id, title, price, images: imgUrl }: Product) => {
   const quantity = getItemQuantity(id);
 
   return (
-    <Card className="h-100">
+    <Card className="bg-light h-100">
       <Card.Img
         variant="top"
         src={imgUrl[0]}

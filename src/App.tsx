@@ -21,7 +21,7 @@ function App() {
   return (
     <ShoppingCartProvider>
       <NavBar />
-      <Container className="mb-4">
+      <Container className="bg-white mb-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />

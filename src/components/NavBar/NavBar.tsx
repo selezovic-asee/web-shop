@@ -5,6 +5,7 @@ import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
 import useAuth from "../../hooks/useAuth";
 import ColorModeSwitch from "../ColorModeSwitch";
+import SearchInput from "../SearchInput";
 
 const NavBar = () => {
   const { openCart, cartQuantity, profile } = useShoppingCart();
@@ -42,39 +43,47 @@ const NavBar = () => {
         </Nav>
       </DropdownButton>
       <Container className="margin-auto">
-        <Nav>
-          <Nav.Link to="/" as={NavLink}>
-            Home
-          </Nav.Link>
-          <Nav.Link to="/store" as={NavLink}>
-            Store
-          </Nav.Link>
-          <Nav.Link to="/trending" as={NavLink}>
-            Trending
-          </Nav.Link>
-          {!profile && (
-            <Nav.Link to="/myAccount" as={NavLink}>
-              My account
+        <div className="d-flex gap-5">
+          <Nav>
+            <Nav.Link to="/" as={NavLink}>
+              Home
             </Nav.Link>
-          )}
-          {profile && (
-            <Nav.Link to="/account" as={NavLink}>
-              Account
+            <Nav.Link to="/store" as={NavLink}>
+              Store
             </Nav.Link>
-          )}
-        </Nav>
-        <div className="d-flex" style={{ color: "black" }}>
-          {isAuth && (
-            <p className="d-flex align-items-center mb-0 me-3">
+            <Nav.Link to="/trending" as={NavLink}>
+              Trending
+            </Nav.Link>
+            {!profile && (
+              <Nav.Link to="/myAccount" as={NavLink}>
+                Account
+              </Nav.Link>
+            )}
+            {profile && (
+              <Nav.Link to="/account" as={NavLink}>
+                Account
+              </Nav.Link>
+            )}
+          </Nav>
+          <SearchInput />
+        </div>
+        <div className="d-flex">
+          {isAuth ? (
+            <p className="d-flex align-items-center mb-0 mx-2">
               Hello {profile.given_name}!
             </p>
+          ) : (
+            <span
+              className="mx-2"
+              style={{ width: "93.02px", height: "48px" }}
+            ></span>
           )}
           {cartQuantity > 0 ? (
             <Button
               onClick={openCart}
               style={{ width: "3rem", height: "3rem", position: "relative" }}
               variant="outline-primary"
-              className="rounded-circle me-2"
+              className="rounded-circle mx-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,11 +98,11 @@ const NavBar = () => {
             </Button>
           ) : (
             <span
-              className="me-2"
+              className="mx-2"
               style={{ width: "48px", height: "48px" }}
             ></span>
           )}
-          <ColorModeSwitch />
+          {/* <ColorModeSwitch /> */}
         </div>
       </Container>
     </NavbarBs>
