@@ -7,6 +7,6 @@ export interface Product {
   images: string[];
 }
 
-const useProducts = () => useProductData<Product>("/products?skip=5&limit=100");
+const useProducts = () => useProductData<Product>("/products?skip=5&limit=0");
 
 export default useProducts;

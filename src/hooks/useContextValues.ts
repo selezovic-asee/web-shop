@@ -8,6 +8,8 @@ export interface CartItem {
 
 const useContextValues = () => {
     const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
     "shopping-cart",
     []
@@ -64,7 +66,8 @@ const useContextValues = () => {
         });
       };
 
-      return { cartItems, cartQuantity, closeCart, decreaseCartQuantity, getItemQuantity, increaseCartQuantity, openCart, removeFromCart, isOpen };
+
+      return { cartItems, cartQuantity, closeCart, decreaseCartQuantity, getItemQuantity, increaseCartQuantity, openCart, removeFromCart, isOpen, inputValue, setInputValue };
 }
 
 export default useContextValues;

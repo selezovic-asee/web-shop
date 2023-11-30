@@ -1,12 +1,11 @@
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useProducts from "../hooks/useProducts";
+import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
-import { Navigate } from "react-router-dom";
 
-const Store = () => {
+const SearchProduct = () => {
   const { inputValue } = useShoppingCart();
-  const { data, error, isLoading } = useProducts();
+  const { data, error, isLoading } = useSearchInput(inputValue);
 
   return (
     <>
@@ -33,4 +32,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default SearchProduct;

@@ -4,18 +4,19 @@ import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import Account from "./pages/Account";
+import AutomotiveList from "./pages/AutomotiveList";
 import FragrancesList from "./pages/FragrancesList";
 import GroceriesList from "./pages/GroceriesList";
 import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
 import MyAccount from "./pages/MyAccount";
+import NoPage from "./pages/NoPage";
+import SearchProduct from "./pages/SearchProduct";
 import SkincareList from "./pages/SkincareList";
 import MotorcycleList from "./pages/SmartphonesList";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import AutomotiveList from "./pages/AutomotiveList";
-import NoPage from "./pages/NoPage";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/groceries" element={<GroceriesList />} />
           <Route path="/sunglasses" element={<SunglassesList />} />
           <Route path="/automotive" element={<AutomotiveList />} />
+          <Route path="/search-product" element={<SearchProduct />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Container>

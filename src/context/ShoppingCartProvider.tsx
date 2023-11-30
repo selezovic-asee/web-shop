@@ -23,6 +23,8 @@ const ShoppingCartProvider = ({ children }: Props) => {
     openCart,
     removeFromCart,
     isOpen,
+    inputValue,
+    setInputValue,
   } = useContextValues();
 
   return (
@@ -43,6 +45,8 @@ const ShoppingCartProvider = ({ children }: Props) => {
         logOut,
         profile,
         user,
+        inputValue,
+        setInputValue,
       }}
     >
       {children}
