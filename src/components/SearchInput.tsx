@@ -1,13 +1,13 @@
-import { Input, InputGroup, InputLeftElement, Link } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { useRef } from "react";
-import { BsSearch } from "react-icons/bs";
-import useShoppingCart from "../hooks/useShoppingCart";
-import { NavLink, Navigate } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import { BsSearch } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
+import useShoppingCart from "../hooks/useShoppingCart";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const { inputValue, setInputValue } = useShoppingCart();
+  const { setInputValue } = useShoppingCart();
 
   return (
     <form
@@ -15,6 +15,7 @@ const SearchInput = () => {
         event.preventDefault();
         if (ref.current) {
           setInputValue(ref.current.value);
+          ref.current.value = "";
         }
       }}
     >

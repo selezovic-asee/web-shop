@@ -8,7 +8,8 @@ import ColorModeSwitch from "../ColorModeSwitch";
 import SearchInput from "../SearchInput";
 
 const NavBar = () => {
-  const { openCart, cartQuantity, profile, setInputValue } = useShoppingCart();
+  const { openCart, cartQuantity, profile, inputValue, setInputValue } =
+    useShoppingCart();
   const isAuth = useAuth();
 
   return (
@@ -48,7 +49,11 @@ const NavBar = () => {
             <Nav.Link to="/" as={NavLink}>
               Home
             </Nav.Link>
-            <Nav.Link to="/store" as={NavLink}>
+            <Nav.Link
+              to="/store"
+              as={NavLink}
+              onClick={() => setInputValue("")}
+            >
               Store
             </Nav.Link>
             <Nav.Link to="/trending" as={NavLink}>

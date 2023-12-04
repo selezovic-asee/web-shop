@@ -13,6 +13,8 @@ const Store = () => {
     isLoading: IsLoading,
   } = useSearchInput(inputValue);
 
+  console.log(Data);
+
   return (
     <>
       {!inputValue ? (
@@ -41,8 +43,8 @@ const Store = () => {
         </>
       ) : (
         <>
-          <h1 className="d-flex justify-content-center">Shop</h1>
           <br />
+          <h1 className="d-flex justify-content-center">Shop</h1>
           {Error && (
             <p className="text-danger d-flex justify-content-center">{error}</p>
           )}
