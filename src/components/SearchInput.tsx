@@ -1,8 +1,9 @@
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement, Link } from "@chakra-ui/react";
 import { useRef } from "react";
 import { BsSearch } from "react-icons/bs";
-import { Navigate } from "react-router-dom";
 import useShoppingCart from "../hooks/useShoppingCart";
+import { NavLink, Navigate } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
@@ -17,17 +18,20 @@ const SearchInput = () => {
         }
       }}
     >
-      {inputValue && <Navigate to="/search-product" />}
-      <InputGroup>
-        <InputLeftElement children={<BsSearch />} />
-        <Input
-          ref={ref}
-          borderRadius={20}
-          placeholder="Search products..."
-          variant="filled"
-          width="20rem"
-        />
-      </InputGroup>
+      <Nav>
+        <Nav.Link to="/store" as={NavLink}>
+          <InputGroup>
+            <InputLeftElement children={<BsSearch />} />
+            <Input
+              ref={ref}
+              borderRadius={20}
+              placeholder="Search products..."
+              variant="filled"
+              width="20rem"
+            />
+          </InputGroup>
+        </Nav.Link>
+      </Nav>
     </form>
   );
 };

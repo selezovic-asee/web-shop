@@ -8,14 +8,8 @@ import ColorModeSwitch from "../ColorModeSwitch";
 import SearchInput from "../SearchInput";
 
 const NavBar = () => {
-  const { openCart, cartQuantity, profile, inputValue, setInputValue } =
-    useShoppingCart();
+  const { openCart, cartQuantity, profile, setInputValue } = useShoppingCart();
   const isAuth = useAuth();
-
-  const clean = () => {
-    setInputValue("");
-    console.log("Očišćeno!");
-  };
 
   return (
     <NavbarBs sticky="top" className="bg-light shadow-sm mb-3">
@@ -50,7 +44,7 @@ const NavBar = () => {
       </DropdownButton>
       <Container className="margin-auto">
         <div className="d-flex gap-5">
-          <Nav onClick={() => clean()}>
+          <Nav>
             <Nav.Link to="/" as={NavLink}>
               Home
             </Nav.Link>

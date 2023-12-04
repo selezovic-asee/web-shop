@@ -11,9 +11,8 @@ import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
 import MyAccount from "./pages/MyAccount";
 import NoPage from "./pages/NoPage";
-import SearchProduct from "./pages/SearchProduct";
 import SkincareList from "./pages/SkincareList";
-import MotorcycleList from "./pages/SmartphonesList";
+import MotorcycleList from "./pages/MotorcycleList";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
@@ -38,7 +37,7 @@ function App() {
           <Route path="/groceries" element={<GroceriesList />} />
           <Route path="/sunglasses" element={<SunglassesList />} />
           <Route path="/automotive" element={<AutomotiveList />} />
-          <Route path="/search-product" element={<SearchProduct />} />
+          {/* <Route path="/search-product" element={<SearchProduct />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Container>
