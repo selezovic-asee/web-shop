@@ -1,10 +1,13 @@
 import { Button } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
+import useAuth from "../hooks/useAuth";
+import { Navigate } from "react-router-dom";
 
-const Account = () => {
+const LogOut = () => {
   const { profile, logOut, isLoading } = useShoppingCart();
+  const isAuth = useAuth();
 
-  return (
+  return isAuth ? (
     <div>
       {isLoading && (
         <div
@@ -31,7 +34,9 @@ const Account = () => {
         <Button onClick={logOut}>Log out</Button>
       </div>
     </div>
+  ) : (
+    <Navigate to="/store" />
   );
 };
 
-export default Account;
+export default LogOut;

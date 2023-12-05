@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
 import { Navigate } from "react-router-dom";
 
-const MyAccount = () => {
+const LogIn = () => {
   const { login, profile, isLoading } = useShoppingCart();
 
   return (
@@ -36,10 +36,10 @@ const MyAccount = () => {
           </>
         </div>
       ) : (
-        <Navigate to="/account" />
+        <Navigate to="/store" />
       )}
     </div>
   );
 };
 
-export default MyAccount;
+export default LogIn;

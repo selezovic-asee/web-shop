@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import useShoppingCart from "../hooks/useShoppingCart";
 import CartItem from "./CartItem/CartItem";
 import formatCurrency from "../utilities/formatCurrency";
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ShoppingCart = ({ isOpen }: Props) => {
-  const { closeCart, cartItems, data: products } = useShoppingCart();
+  const { closeCart, cartItems, data: products, profile } = useShoppingCart();
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -16,7 +16,7 @@ const ShoppingCart = ({ isOpen }: Props) => {
         <Offcanvas.Title>Cart</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Stack gap={3}>
+        <Stack gap={3} className="mb-3">
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
@@ -30,6 +30,7 @@ const ShoppingCart = ({ isOpen }: Props) => {
             )}
           </div>
         </Stack>
+        <Button>Payment</Button>
       </Offcanvas.Body>
     </Offcanvas>
   );

@@ -1,6 +1,12 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Nav,
+  NavDropdown,
+  Navbar as NavbarBs,
+} from "react-bootstrap";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./NavBar.css";
 import useAuth from "../../hooks/useAuth";
@@ -44,7 +50,7 @@ const NavBar = () => {
         </Nav>
       </DropdownButton>
       <Container className="margin-auto">
-        <div className="d-flex gap-5">
+        <div className="d-flex align-items-center gap-5">
           <Nav>
             <Nav.Link to="/" as={NavLink}>
               Home
@@ -59,16 +65,24 @@ const NavBar = () => {
             <Nav.Link to="/trending" as={NavLink}>
               Trending
             </Nav.Link>
-            {!profile && (
-              <Nav.Link to="/myAccount" as={NavLink}>
-                Account
-              </Nav.Link>
-            )}
-            {profile && (
-              <Nav.Link to="/account" as={NavLink}>
-                Account
-              </Nav.Link>
-            )}
+            <NavDropdown
+              title="My account"
+              id="navbarScrollingDropdown"
+              className="d-flex justify-content-center"
+            >
+              {!profile && (
+                <>
+                  <Nav.Link to="/log-in" as={NavLink}>
+                    Log in
+                  </Nav.Link>
+                </>
+              )}
+              {profile && (
+                <Nav.Link to="/log-out" as={NavLink}>
+                  Log out
+                </Nav.Link>
+              )}
+            </NavDropdown>
           </Nav>
           <SearchInput />
         </div>
