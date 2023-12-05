@@ -20,6 +20,8 @@ interface ShoppingCartContextType {
   user: any[];
   inputValue: string;
   setInputValue: React.Dispatch<string>;
+  categoryProduct: string;
+  setCategoryProduct: React.Dispatch<string>;
 }
 
 const ShoppingCartContext = React.createContext<ShoppingCartContextType>(

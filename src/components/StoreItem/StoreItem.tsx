@@ -4,15 +4,23 @@ import useShoppingCart from "../../hooks/useShoppingCart";
 import "./StoreItem.css";
 import { Product } from "../../hooks/useProducts";
 
-const StoreItem = ({ id, title, price, images: imgUrl }: Product) => {
+const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
   const {
     getItemQuantity,
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
+    categoryProduct,
+    setCategoryProduct,
   } = useShoppingCart();
 
   const quantity = getItemQuantity(id);
+
+  // if (category) {
+  setCategoryProduct(category);
+  // } else {
+  //   setCategoryProduct("");
+  // }
 
   return (
     <Card className="card-item bg-light h-100">

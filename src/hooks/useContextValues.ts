@@ -6,16 +6,17 @@ export interface CartItem {
     quantity: number;
   }
 
-const useContextValues = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  const [inputValue, setInputValue] = useState('');
+    const useContextValues = () => {
+      const [isOpen, setIsOpen] = useState(false);
+      const [inputValue, setInputValue] = useState('');
+      const [categoryProduct, setCategoryProduct] = useState('');
 
-  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
-    "shopping-cart",
-    []
+      const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
+        "shopping-cart",
+        []
   );
 
-    const cartQuantity = cartItems.reduce(
+      const cartQuantity = cartItems.reduce(
         (quantity, item) => item.quantity + quantity,
         0
       );
@@ -67,7 +68,7 @@ const useContextValues = () => {
       };
 
 
-      return { cartItems, cartQuantity, closeCart, decreaseCartQuantity, getItemQuantity, increaseCartQuantity, openCart, removeFromCart, isOpen, inputValue, setInputValue };
+      return { cartItems, cartQuantity, closeCart, decreaseCartQuantity, getItemQuantity, increaseCartQuantity, openCart, removeFromCart, isOpen, inputValue, setInputValue, categoryProduct, setCategoryProduct };
 }
 
 export default useContextValues;

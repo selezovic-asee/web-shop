@@ -37,7 +37,6 @@ function App() {
           <Route path="/groceries" element={<GroceriesList />} />
           <Route path="/sunglasses" element={<SunglassesList />} />
           <Route path="/automotive" element={<AutomotiveList />} />
-          {/* <Route path="/search-product" element={<SearchProduct />} /> */}
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Container>
