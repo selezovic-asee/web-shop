@@ -1,12 +1,13 @@
 import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useSkincare from "../hooks/useSkincare";
+import useBag from "../hooks/useBag";
 
 const SkincareList = () => {
-  const { data, isLoading, error } = useSkincare();
+  const { data, isLoading, error } = useBag();
+
   return (
     <>
-      <h1 className="d-flex justify-content-center">Skincare</h1>
+      <h1 className="d-flex justify-content-center">Bags</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>

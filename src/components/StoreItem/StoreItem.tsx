@@ -10,7 +10,6 @@ const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
-    categoryProduct,
     setCategoryProduct,
   } = useShoppingCart();
 

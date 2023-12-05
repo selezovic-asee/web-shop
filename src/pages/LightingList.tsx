@@ -1,13 +1,15 @@
 import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
-import useAutomotive from "../hooks/useAutomotive";
+import useLighting from "../hooks/useLighting";
 
-const AutomotiveList = () => {
-  const { data, isLoading, error } = useAutomotive();
+const LightingList = () => {
+  const { data, isLoading, error } = useLighting();
+
+  console.log(data);
 
   return (
     <>
-      <h1 className="d-flex justify-content-center">Automotive</h1>
+      <h1 className="d-flex justify-content-center">Lighting</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>
@@ -31,4 +33,4 @@ const AutomotiveList = () => {
   );
 };
 
-export default AutomotiveList;
+export default LightingList;

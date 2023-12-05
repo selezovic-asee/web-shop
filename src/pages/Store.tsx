@@ -54,14 +54,20 @@ const Store = () => {
           <br />
           {categoryProduct && Data.length > 0 ? (
             <div className="d-flex justify-content-center">
-              <h3>{categoryProduct}</h3>
+              <h5 className="mb-5">
+                You searched for...
+                <br />
+                <div className="d-flex justify-content-center">
+                  <span className="fw-bold fs-2">"{inputValue}"</span>
+                </div>
+              </h5>
             </div>
           ) : (
             <div
               className="d-flex justify-content-center align-items-center"
               style={{ height: "600px" }}
             >
-              <h3>Unfortunately, we do not have that product in our offer.</h3>
+              <h5>Sorry, we did not find any products for your search.</h5>
             </div>
           )}
           {/* <h1 className="d-flex justify-content-center">Shop</h1> */}

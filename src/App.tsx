@@ -4,18 +4,21 @@ import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import Account from "./pages/Account";
-import AutomotiveList from "./pages/AutomotiveList";
+import AutomotiveList from "./pages/LightingList";
 import FragrancesList from "./pages/FragrancesList";
-import GroceriesList from "./pages/GroceriesList";
+import GroceriesList from "./pages/FurnitureList";
 import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
 import MyAccount from "./pages/MyAccount";
 import NoPage from "./pages/NoPage";
-import SkincareList from "./pages/SkincareList";
+import SkincareList from "./pages/BagList";
 import MotorcycleList from "./pages/MotorcycleList";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
+import LightingList from "./pages/LightingList";
+import FurnitureList from "./pages/FurnitureList";
+import BagList from "./pages/BagList";
 
 function App() {
   return (
@@ -33,10 +36,10 @@ function App() {
           <Route path="/motorcycle" element={<MotorcycleList />} />
           <Route path="/laptops" element={<LaptopsList />} />
           <Route path="/fragnances" element={<FragrancesList />} />
-          <Route path="/skincare" element={<SkincareList />} />
-          <Route path="/groceries" element={<GroceriesList />} />
+          <Route path="/bag" element={<BagList />} />
+          <Route path="/furniture" element={<FurnitureList />} />
           <Route path="/sunglasses" element={<SunglassesList />} />
-          <Route path="/automotive" element={<AutomotiveList />} />
+          <Route path="/lighting" element={<LightingList />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Container>

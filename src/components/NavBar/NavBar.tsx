@@ -20,23 +20,23 @@ const NavBar = () => {
         className="dropdown-button"
       >
         <Nav className="d-flex flex-column" onClick={() => setInputValue("")}>
+          <Nav.Link to="/bag" as={NavLink}>
+            Bag
+          </Nav.Link>
           <Nav.Link to="/laptops" as={NavLink}>
-            Laptops
+            Laptop
           </Nav.Link>
           <Nav.Link to="/fragnances" as={NavLink}>
-            Fragnances
+            Perfume
           </Nav.Link>
-          <Nav.Link to="/skincare" as={NavLink}>
-            Skincare
-          </Nav.Link>
-          <Nav.Link to="/groceries" as={NavLink}>
-            Groceries
+          <Nav.Link to="/furniture" as={NavLink}>
+            Furniture
           </Nav.Link>
           <Nav.Link to="/sunglasses" as={NavLink}>
             Sunglasses
           </Nav.Link>
-          <Nav.Link to="/automotive" as={NavLink}>
-            Automotive
+          <Nav.Link to="/lighting" as={NavLink}>
+            Lighting
           </Nav.Link>
           <Nav.Link to="/motorcycle" as={NavLink}>
             Motorcycle

@@ -8,6 +8,6 @@ export interface Product {
   category: string;
 }
 
-const useProducts = () => useProductData<Product>("/products?skip=5&limit=0");
+const useProducts = () => useProductData<Product>("/products?skip=5&limit=100");
 
 export default useProducts;
