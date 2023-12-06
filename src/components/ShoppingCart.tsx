@@ -1,7 +1,8 @@
-import { Button, Offcanvas, Stack } from "react-bootstrap";
+import { Button, Nav, Offcanvas, Stack } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import useShoppingCart from "../hooks/useShoppingCart";
-import CartItem from "./CartItem/CartItem";
 import formatCurrency from "../utilities/formatCurrency";
+import CartItem from "./CartItem/CartItem";
 
 interface Props {
   isOpen: boolean;
@@ -9,6 +10,10 @@ interface Props {
 
 const ShoppingCart = ({ isOpen }: Props) => {
   const { closeCart, cartItems, data: products, profile } = useShoppingCart();
+
+  // const payment = () => {
+  //   profile ? <Navigate to="/payment" /> : <Navigate to="/log-in" />;
+  // };
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -30,7 +35,17 @@ const ShoppingCart = ({ isOpen }: Props) => {
             )}
           </div>
         </Stack>
-        <Button>Payment</Button>
+        <Nav>
+          {!profile ? (
+            <Nav.Link to="/log-in" as={NavLink} onClick={() => closeCart()}>
+              <Button>Complete your purchase.</Button>
+            </Nav.Link>
+          ) : (
+            <Nav.Link to="/payment" as={NavLink} onClick={() => closeCart()}>
+              <Button>Complete your purchase.</Button>
+            </Nav.Link>
+          )}
+        </Nav>
       </Offcanvas.Body>
     </Offcanvas>
   );

@@ -1,14 +1,15 @@
 import { Button } from "react-bootstrap";
-import useShoppingCart from "../hooks/useShoppingCart";
-import useAuth from "../hooks/useAuth";
+import useShoppingCart from "../../hooks/useShoppingCart";
+import useAuth from "../../hooks/useAuth";
 import { Navigate } from "react-router-dom";
+import "./Registration.css";
 
-const LogOut = () => {
+const Registration = () => {
   const { profile, logOut, isLoading } = useShoppingCart();
   const isAuth = useAuth();
 
   return isAuth ? (
-    <div>
+    <div className="bgLogOut">
       {isLoading && (
         <div
           className="d-flex justify-content-center align-items-center"
@@ -17,21 +18,24 @@ const LogOut = () => {
           <div className="spinner-border"></div>
         </div>
       )}
-      <div className="d-flex align-items-center flex-column">
-        <img
+      <div
+        className="d-flex align-items-center justify-content-center flex-column"
+        style={{ height: "100vh" }}
+      >
+        {/* <img
           className="rounded-circle"
           src={profile.picture}
           alt="user image"
-        />
+        /> */}
         <br />
         <br />
         <br />
-        <h4>User:</h4>
+        {/* <h4>User:</h4>
         <p>Name: {profile.name}</p>
         <p>Email Addres: {profile.email}</p>
         <br />
-        <br />
-        <Button onClick={logOut}>Log out</Button>
+        <br /> */}
+        {/* <Button onClick={logOut}>Log out</Button> */}
       </div>
     </div>
   ) : (
@@ -39,4 +43,4 @@ const LogOut = () => {
   );
 };
 
-export default LogOut;
+export default Registration;

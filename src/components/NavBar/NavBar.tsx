@@ -6,15 +6,15 @@ import {
   Navbar as NavbarBs,
 } from "react-bootstrap";
 import DropdownButton from "react-bootstrap/DropdownButton";
-import { NavLink, Navigate } from "react-router-dom";
-import useShoppingCart from "../../hooks/useShoppingCart";
-import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useShoppingCart from "../../hooks/useShoppingCart";
 import ColorModeSwitch from "../ColorModeSwitch";
 import SearchInput from "../SearchInput";
+import "./NavBar.css";
 
 const NavBar = () => {
-  const { openCart, cartQuantity, profile, inputValue, setInputValue } =
+  const { openCart, cartQuantity, profile, setInputValue, logOut } =
     useShoppingCart();
   const isAuth = useAuth();
 
@@ -71,14 +71,12 @@ const NavBar = () => {
               className="d-flex justify-content-center"
             >
               {!profile && (
-                <>
-                  <Nav.Link to="/log-in" as={NavLink}>
-                    Log in
-                  </Nav.Link>
-                </>
+                <Nav.Link to="/log-in" as={NavLink}>
+                  Log in
+                </Nav.Link>
               )}
               {profile && (
-                <Nav.Link to="/log-out" as={NavLink}>
+                <Nav.Link to="/log-in" as={NavLink} onClick={() => logOut()}>
                   Log out
                 </Nav.Link>
               )}

@@ -3,13 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
-import Account from "./pages/LogOut";
+import Account from "./pages/Registration/Registration";
 import AutomotiveList from "./pages/LightingList";
 import FragrancesList from "./pages/FragrancesList";
 import GroceriesList from "./pages/FurnitureList";
 import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
-import MyAccount from "./pages/LogIn";
+import MyAccount from "./pages/LogIn/LogIn";
 import NoPage from "./pages/NoPage";
 import SkincareList from "./pages/BagList";
 import MotorcycleList from "./pages/MotorcycleList";
@@ -19,8 +19,10 @@ import Trending from "./pages/Trending/Trending";
 import LightingList from "./pages/LightingList";
 import FurnitureList from "./pages/FurnitureList";
 import BagList from "./pages/BagList";
-import LogIn from "./pages/LogIn";
-import LogOut from "./pages/LogOut";
+import LogIn from "./pages/LogIn/LogIn";
+import LogOut from "./pages/Registration/Registration";
+import Payment from "./components/Payment";
+import Registration from "./pages/Registration/Registration";
 
 function App() {
   return (
@@ -31,9 +33,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/store" element={<Store />} />
-          {/* <Route element={<ProtectedRoutes />}> */}
-          {/* </Route> */}
-          <Route path="/log-out" element={<LogOut />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/payment" element={<Payment />} />
+          </Route>
+          <Route path="/registration" element={<Registration />} />
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/motorcycle" element={<MotorcycleList />} />
           <Route path="/laptops" element={<LaptopsList />} />
