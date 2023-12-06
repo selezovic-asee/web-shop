@@ -84,8 +84,8 @@ const NavBar = () => {
           </Nav>
           <SearchInput />
         </div>
-        <div className="d-flex">
-          {isAuth ? (
+        <div className="d-flex" style={{ width: "250px" }}>
+          {/* {isAuth ? (
             <p className="d-flex align-items-center mb-0 mx-2">
               Hello {profile.given_name}!
             </p>
@@ -94,7 +94,7 @@ const NavBar = () => {
               className="mx-2"
               style={{ width: "93.02px", height: "48px" }}
             ></span>
-          )}
+          )} */}
           {cartQuantity > 0 ? (
             <Button
               onClick={openCart}

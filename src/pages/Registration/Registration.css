@@ -1,5 +1,16 @@
-.bgLogOut {
+.registration {
     background-image: url(../../../public/imgs/LogOutPage.jpg);
     background-size: auto;
     height: 100vh;
+}
+
+.succsseful {
+    width: 300px;
+    height: 50px;
+    background-color: aquamarine;
+    margin-top: 50px;
+}
+
+p {
+    margin-bottom: 0;
 }
