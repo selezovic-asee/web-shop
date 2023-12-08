@@ -1,11 +1,11 @@
-import { Button, Nav } from "react-bootstrap";
-import useShoppingCart from "../../hooks/useShoppingCart";
-import useAuth from "../../hooks/useAuth";
+import { Nav } from "react-bootstrap";
 import { NavLink, Navigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import useShoppingCart from "../../hooks/useShoppingCart";
 import "./Registration.css";
 
 const Registration = () => {
-  const { profile, logOut, isLoading } = useShoppingCart();
+  const { profile, isLoading } = useShoppingCart();
   const isAuth = useAuth();
 
   return isAuth ? (

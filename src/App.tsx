@@ -3,26 +3,20 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
-import Account from "./pages/Registration/Registration";
-import AutomotiveList from "./pages/LightingList";
+import BagList from "./pages/BagList";
 import FragrancesList from "./pages/FragrancesList";
-import GroceriesList from "./pages/FurnitureList";
+import FurnitureList from "./pages/FurnitureList";
 import Home from "./pages/Home/Home";
 import LaptopsList from "./pages/LaptopsList";
-import MyAccount from "./pages/LogIn/LogIn";
-import NoPage from "./pages/NoPage";
-import SkincareList from "./pages/BagList";
+import LightingList from "./pages/LightingList";
+import LogIn from "./pages/LogIn/LogIn";
 import MotorcycleList from "./pages/MotorcycleList";
+import NoPage from "./pages/NoPage";
+import Payment from "./pages/Payment";
+import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import LightingList from "./pages/LightingList";
-import FurnitureList from "./pages/FurnitureList";
-import BagList from "./pages/BagList";
-import LogIn from "./pages/LogIn/LogIn";
-import LogOut from "./pages/Registration/Registration";
-import Payment from "./components/Payment";
-import Registration from "./pages/Registration/Registration";
 
 function App() {
   return (

@@ -1,14 +1,9 @@
 .home {
-    background: url(../../../public/imgs/homePage.jpg) no-repeat;
+    background: url(../../../public/imgs/homePage2.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
     width: 100%;
-}
-
-.main h1 {
-    font-size: 4rem;
-    font-weight: 700;
 }
 
 .btn1 {
@@ -22,7 +17,25 @@
     border-radius: 65px;
 }
 
+.btnPosition {
+    position: absolute;
+    bottom: 300px;
+    right: 500px;
+}
+
 .content {
     transform: translate(0, 200%)
+}
+
+.text {
+    color: white;
+}
+
+.isLoading {
+    height: 600px;
+}
+
+.navLink {
+    color: white;
 }
 
