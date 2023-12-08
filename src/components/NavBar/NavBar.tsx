@@ -119,7 +119,7 @@ const NavBar = () => {
               style={{ width: "48px", height: "48px" }}
             ></span>
           )}
-          <ColorModeSwitch />
+          {/* <ColorModeSwitch /> */}
         </div>
       </Container>
     </NavbarBs>

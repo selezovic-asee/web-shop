@@ -11,10 +11,6 @@ interface Props {
 const ShoppingCart = ({ isOpen }: Props) => {
   const { closeCart, cartItems, data: products, profile } = useShoppingCart();
 
-  // const payment = () => {
-  //   profile ? <Navigate to="/payment" /> : <Navigate to="/log-in" />;
-  // };
-
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>

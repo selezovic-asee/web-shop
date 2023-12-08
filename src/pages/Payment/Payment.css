@@ -1,6 +1,4 @@
 
-.paymentBg {
-    background: url(../../../public/imgs/paymentPage.jpg) no-repeat;
-    background-size: auto;
-    height: 100vh;
+.heightPayment {
+    height: 650px;
 }
