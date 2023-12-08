@@ -7,20 +7,14 @@ import {
   MDBRow,
 } from "mdb-react-ui-kit";
 import { Button } from "react-bootstrap";
-import useShoppingCart from "../hooks/useShoppingCart";
+import useShoppingCart from "../../hooks/useShoppingCart";
+import "./Payment.css";
 
 const Payment = () => {
   const { profile } = useShoppingCart();
 
   return (
-    <MDBContainer
-      className="py-5"
-      fluid
-      // style={{
-      //   backgroundImage:
-      //     "url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp)",
-      // }}
-    >
+    <MDBContainer className="paymentBg py-5" fluid>
       <MDBRow className=" d-flex justify-content-center">
         <MDBCol md="10" lg="8" xl="5">
           <MDBCard className="rounded-3">

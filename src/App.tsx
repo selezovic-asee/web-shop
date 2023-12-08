@@ -12,7 +12,7 @@ import LightingList from "./pages/LightingList";
 import LogIn from "./pages/LogIn/LogIn";
 import MotorcycleList from "./pages/MotorcycleList";
 import NoPage from "./pages/NoPage";
-import Payment from "./pages/Payment";
+import Payment from "./pages/Payment/Payment";
 import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
