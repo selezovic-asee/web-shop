@@ -9,7 +9,6 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useShoppingCart from "../../hooks/useShoppingCart";
-import ColorModeSwitch from "../ColorModeSwitch";
 import SearchInput from "../SearchInput";
 import "./NavBar.css";
 
@@ -20,36 +19,49 @@ const NavBar = () => {
 
   return (
     <NavbarBs sticky="top" className="bg-light shadow-sm mb-3">
-      <DropdownButton
-        id="dropdown-item-button"
-        title="Category"
-        className="dropdown-button"
-      >
-        <Nav className="d-flex flex-column" onClick={() => setInputValue("")}>
-          <Nav.Link to="/bag" as={NavLink}>
-            Bag
-          </Nav.Link>
-          <Nav.Link to="/laptops" as={NavLink}>
-            Laptop
-          </Nav.Link>
-          <Nav.Link to="/fragnances" as={NavLink}>
-            Perfume
-          </Nav.Link>
-          <Nav.Link to="/furniture" as={NavLink}>
-            Furniture
-          </Nav.Link>
-          <Nav.Link to="/sunglasses" as={NavLink}>
-            Sunglasses
-          </Nav.Link>
-          <Nav.Link to="/lighting" as={NavLink}>
-            Lighting
-          </Nav.Link>
-          <Nav.Link to="/motorcycle" as={NavLink}>
-            Motorcycle
-          </Nav.Link>
-        </Nav>
-      </DropdownButton>
       <Container className="margin-auto">
+        <NavbarBs.Brand>
+          <Nav>
+            <Nav.Link to="/" as={NavLink}>
+              {/* <img
+                className="logoShop"
+                src="public/logo/navBar.svg"
+                alt="logo"
+              /> */}
+              Navbar
+            </Nav.Link>
+          </Nav>
+        </NavbarBs.Brand>
+        <DropdownButton
+          id="dropdown-item-button"
+          title="Category"
+          className="dropdown-button"
+        >
+          <Nav className="d-flex flex-column" onClick={() => setInputValue("")}>
+            <Nav.Link to="/bag" as={NavLink}>
+              Bag
+            </Nav.Link>
+            <Nav.Link to="/laptops" as={NavLink}>
+              Laptop
+            </Nav.Link>
+            <Nav.Link to="/fragnances" as={NavLink}>
+              Perfume
+            </Nav.Link>
+            <Nav.Link to="/furniture" as={NavLink}>
+              Furniture
+            </Nav.Link>
+            <Nav.Link to="/sunglasses" as={NavLink}>
+              Sunglasses
+            </Nav.Link>
+            <Nav.Link to="/lighting" as={NavLink}>
+              Lighting
+            </Nav.Link>
+            <Nav.Link to="/motorcycle" as={NavLink}>
+              Motorcycle
+            </Nav.Link>
+          </Nav>
+        </DropdownButton>
+
         <div className="d-flex align-items-center gap-5">
           <Nav>
             <Nav.Link to="/" as={NavLink}>

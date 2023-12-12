@@ -15,7 +15,7 @@ const Store = () => {
   } = useSearchInput(inputValue);
 
   // console.log(categoryProduct);
-  console.log(Data);
+  // console.log(Data);
 
   // const findCategory = Data.find((product) => product.category === inputValue);
 

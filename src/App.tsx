@@ -17,11 +17,12 @@ import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
+import NavbarIgra from "./NavbarIgra";
 
 function App() {
   return (
     <ShoppingCartProvider>
-      <NavBar />
+      <NavbarIgra />
       <Container className="bg-white mb-4">
         <Routes>
           <Route path="/" element={<Home />} />
