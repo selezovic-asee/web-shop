@@ -6,7 +6,7 @@ import useShoppingCart from "../../hooks/useShoppingCart";
 import SearchInput from "../SearchInput";
 import { useEffect, useRef, useState } from "react";
 
-const NavbarIgra = () => {
+const NavBar = () => {
   const { openCart, cartQuantity, profile, setInputValue, logOut } =
     useShoppingCart();
 
@@ -194,4 +194,4 @@ const NavbarIgra = () => {
   );
 };
 
-export default NavbarIgra;
+export default NavBar;
