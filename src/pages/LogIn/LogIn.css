@@ -2,5 +2,13 @@
 .bgLogIn {
     background-image: url(../../../public/imgs/LogInPage.jpg);
     background-size: auto;
+    border-radius: 30px;
     height: 100vh;
+}
+
+@media all and (max-width: 425px) {
+    .contentLogIn {
+        font-size: 12px;
+        
+    }
 }

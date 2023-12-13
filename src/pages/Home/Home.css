@@ -2,6 +2,7 @@
     background: url(../../../public/imgs/homePage.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
+    border-radius: 30px;
     background-position: 50% 50%;
     width: 100%;
 }
@@ -19,8 +20,8 @@
 
 .btnPosition {
     position: absolute;
-    bottom: 300px;
-    right: 500px;
+    bottom: 100px;
+    right: 50px;
 }
 
 .content {
@@ -39,3 +40,10 @@
     color: white;
 }
 
+@media all and (min-width: 1024px) {
+    .btnPosition {
+        position: absolute;
+        bottom: 100px;
+        right: 700px;
+    }
+}

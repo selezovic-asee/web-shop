@@ -19,7 +19,7 @@ const Registration = () => {
         </div>
       )}
       <div className="succsseful d-flex justify-content-center align-items-center text-center">
-        <p>
+        <p className="ps-3">
           Hello {profile.given_name},
           <br />
           you have successfully logged in!

@@ -18,7 +18,7 @@ const Payment = () => {
       cartItems.reduce((total, cartItem) => {
         const item = products.find((item) => item.id === cartItem.id);
         return total + (item?.price || 0) * cartItem.quantity;
-      }, 0) - 10
+      }, 0) + 10
     );
   };
 

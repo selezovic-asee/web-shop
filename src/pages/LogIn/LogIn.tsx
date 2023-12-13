@@ -25,11 +25,13 @@ const LogIn = () => {
             className="d-flex align-items-center flex-column bg-info border border-dark rounded-pill text-white"
             style={{ width: "600px", height: "250px" }}
           >
-            <h2>Login to the user account.</h2>
+            <h2 className="contentLogIn pt-5">Login to the user account.</h2>
             <br />
             <br />
             <>
-              <p>Registering allows you to make purchases/orders.</p>
+              <p className="contentLogIn">
+                Registering allows you to make purchases/orders.
+              </p>
               <br />
               <Button id="login" onClick={() => login()}>
                 Sign in with Google

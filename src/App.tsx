@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import BagList from "./pages/BagList";
@@ -17,12 +16,12 @@ import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import NavbarIgra from "./NavbarIgra";
+import NavBar from "./components/NavBar/Navbar";
 
 function App() {
   return (
     <ShoppingCartProvider>
-      <NavbarIgra />
+      <NavBar />
       <Container className="bg-white mb-4">
         <Routes>
           <Route path="/" element={<Home />} />

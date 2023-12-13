@@ -11,6 +11,17 @@ interface Props {
 const ShoppingCart = ({ isOpen }: Props) => {
   const { closeCart, cartItems, data: products, profile } = useShoppingCart();
 
+  const total = () => {
+    return formatCurrency(
+      cartItems.reduce((total, cartItem) => {
+        const item = products.find((item) => item.id === cartItem.id);
+        return total + (item?.price || 0) * cartItem.quantity;
+      }, 0)
+    );
+  };
+
+  const cart = total();
+
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
@@ -21,14 +32,17 @@ const ShoppingCart = ({ isOpen }: Props) => {
           {cartItems.map((item) => (
             <CartItem key={item.id} {...item} />
           ))}
+          {cart === "$0.00" && (
+            <h4 className="text-center">Your cart is empty.</h4>
+          )}
           <div className="ms-auto fw-bold fs-5">
-            Total{" "}
-            {formatCurrency(
+            Total {cart}
+            {/* {formatCurrency(
               cartItems.reduce((total, cartItem) => {
                 const item = products.find((item) => item.id === cartItem.id);
                 return total + (item?.price || 0) * cartItem.quantity;
               }, 0)
-            )}
+            )} */}
           </div>
         </Stack>
         <Nav>
