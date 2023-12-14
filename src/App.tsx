@@ -16,13 +16,13 @@ import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import NavBar from "./components/NavBar/Navbar";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <ShoppingCartProvider>
       <NavBar />
-      <Container className="bg-white mb-4">
+      <Container className="bg-white mb-4 p-0" style={{ borderRadius: "30px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />

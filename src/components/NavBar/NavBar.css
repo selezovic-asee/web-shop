@@ -29,3 +29,27 @@
         flex-direction: column;
     }
 }
+
+@media all and (max-width: 374px) {
+    .logoShop {
+        width: 15px;
+        height: 15px;
+    }
+
+    .brand {
+        margin: 3px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .dropdownLayout {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .dropdown-button {
+        padding: 5px 0;
+    }
+}

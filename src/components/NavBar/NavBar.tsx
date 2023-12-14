@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react";
 import { Button, Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import SearchInput from "../SearchInput";
-import { useEffect, useRef, useState } from "react";
+import "./NavBar.css";
+import ColorModeSwitch from "../ColorModeSwitch";
 
 const NavBar = () => {
   const { openCart, cartQuantity, profile, setInputValue, logOut } =
@@ -28,9 +29,9 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className=" bg-body-tertiary">
       <Container style={{ width: "100%" }}>
-        <Navbar.Brand>
+        <Navbar.Brand className="brand">
           <Nav>
             <Nav.Link to="/" as={NavLink}>
               <img
@@ -41,8 +42,8 @@ const NavBar = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Brand>
-        {windowSize[0] <= 768 && <SearchInput />}
-        {windowSize[0] <= 768 &&
+        {windowSize[0] <= 991 && <SearchInput />}
+        {windowSize[0] <= 991 &&
           (cartQuantity > 0 ? (
             <Button
               onClick={openCart}
@@ -67,13 +68,14 @@ const NavBar = () => {
               style={{ width: "48px", height: "48px" }}
             ></span>
           ))}
+        {windowSize[0] < 1024 && <ColorModeSwitch />}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <div
-            className="d-flex justify-content-between"
-            style={{ width: "100%" }}
-          >
-            <div className="dropdownLayout d-flex align-items-center ps-5">
+        <div
+          className="d-flex justify-content-between"
+          style={{ width: "100%" }}
+        >
+          <Navbar.Collapse id="basic-navbar-nav">
+            <div className="dropdownLayout ps-2">
               <DropdownButton
                 id="dropdown-item-button"
                 title="Category"
@@ -123,7 +125,8 @@ const NavBar = () => {
                 <NavDropdown
                   title="My account"
                   id="navbarScrollingDropdown"
-                  className="d-flex justify-content-center"
+                  // className="d-flex justify-content-center"
+                  style={{ width: "160px" }}
                 >
                   <div className="ps-4">
                     {!profile && (
@@ -144,8 +147,11 @@ const NavBar = () => {
                 </NavDropdown>
               </Nav>
             </div>
+            {/* </div> */}
+          </Navbar.Collapse>
+          {windowSize[0] > 991 && (
             <div className="d-flex">
-              {windowSize[0] > 768 && <SearchInput />}
+              <SearchInput />
               {/* {isAuth ? (
                 <p className="d-flex align-items-center mb-0 mx-2">
                   Hello {profile.given_name}!
@@ -156,39 +162,39 @@ const NavBar = () => {
                   style={{ width: "93.02px", height: "48px" }}
                 ></span>
                           )} */}
-              {windowSize[0] > 768 &&
-                (cartQuantity > 0 ? (
-                  <Button
-                    onClick={openCart}
-                    style={{
-                      width: "3rem",
-                      height: "3rem",
-                      position: "relative",
-                    }}
-                    variant="outline-primary"
-                    className="rounded-circle mx-2"
+              {cartQuantity > 0 ? (
+                <Button
+                  onClick={openCart}
+                  style={{
+                    width: "3rem",
+                    height: "3rem",
+                    position: "relative",
+                  }}
+                  variant="outline-primary"
+                  className="rounded-circle mx-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                    fill="currentColor"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512"
-                      fill="currentColor"
-                    >
-                      <path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z" />
-                    </svg>
-                    <div className="indicator rounded-circle bg-danger d-flex justify-content-center align-items-center">
-                      {cartQuantity}
-                    </div>
-                  </Button>
-                ) : (
-                  <span
-                    className="mx-2"
-                    style={{ width: "48px", height: "48px" }}
-                  ></span>
-                ))}
-              {/* <ColorModeSwitch /> */}
+                    <path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z" />
+                  </svg>
+                  <div className="indicator rounded-circle bg-danger d-flex justify-content-center align-items-center">
+                    {cartQuantity}
+                  </div>
+                </Button>
+              ) : (
+                <span
+                  className="mx-2"
+                  style={{ width: "48px", height: "48px" }}
+                ></span>
+              )}
             </div>
-          </div>
-        </Navbar.Collapse>
+          )}
+
+          {windowSize[0] >= 1024 && <ColorModeSwitch />}
+        </div>
       </Container>
     </Navbar>
   );

@@ -25,7 +25,7 @@ const SearchInput = () => {
     };
   }, []);
 
-  return windowSize[0] <= 768 ? (
+  return windowSize[0] < 768 ? (
     <form
       onSubmit={(event) => {
         event.preventDefault();
@@ -45,6 +45,7 @@ const SearchInput = () => {
               placeholder="Search products..."
               variant="filled"
               width="7rem"
+              className="pe-0"
             />
           </InputGroup>
         </Nav.Link>
