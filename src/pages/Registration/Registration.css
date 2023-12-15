@@ -1,7 +1,7 @@
 .registration {
     background-image: url(../../../public/imgs/LogOutPage.jpg);
     background-size: auto;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     height: 100vh;
 }
 

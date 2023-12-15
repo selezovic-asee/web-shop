@@ -18,11 +18,12 @@ import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
 import NavBar from "./components/NavBar/NavBar";
 
+/* style={{ borderRadius: "30px" }} and Container*/
 function App() {
   return (
     <ShoppingCartProvider>
       <NavBar />
-      <Container className="bg-white mb-4 p-0" style={{ borderRadius: "30px" }}>
+      <div className="bg-white mb-4 p-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
@@ -41,7 +42,7 @@ function App() {
           <Route path="/lighting" element={<LightingList />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
-      </Container>
+      </div>
     </ShoppingCartProvider>
   );
 }

@@ -2,7 +2,7 @@
 .bgLogIn {
     background-image: url(../../../public/imgs/LogInPage.jpg);
     background-size: auto;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     height: 100vh;
 }
 

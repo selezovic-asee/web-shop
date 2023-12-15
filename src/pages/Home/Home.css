@@ -2,7 +2,7 @@
     background: url(../../../public/imgs/homePage.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     background-position: 50% 50%;
     width: 100%;
 }
