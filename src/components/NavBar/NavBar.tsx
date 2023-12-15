@@ -109,6 +109,9 @@ const NavBar = () => {
                 </Nav>
               </DropdownButton>
               <Nav>
+                <Nav.Link to="/website" as={NavLink}>
+                  Website
+                </Nav.Link>
                 <Nav.Link to="/" as={NavLink}>
                   Home
                 </Nav.Link>

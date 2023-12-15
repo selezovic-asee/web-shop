@@ -17,6 +17,7 @@ import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
 import NavBar from "./components/NavBar/NavBar";
+import Website from "./pages/Website";
 
 /* style={{ borderRadius: "30px" }} and Container*/
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <div className="bg-white mb-4 p-0">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/website" element={<Website />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/store" element={<Store />} />
           <Route element={<ProtectedRoutes />}>

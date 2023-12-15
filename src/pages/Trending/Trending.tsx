@@ -1,3 +1,4 @@
+import Link from "../../components/Link/Link";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import "./Trending.css";
 
