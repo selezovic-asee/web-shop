@@ -1,8 +1,7 @@
-import "./Link.css";
 // ovaj css file utječe na cijelu aplikaciju
-import "../../../webSite/css/styles.css";
+import "./Styles.css";
 
-const Link = () => {
+const Links = () => {
   return (
     <a href="#" className="link-arrow">
       Learn More
@@ -10,4 +9,4 @@ const Link = () => {
   );
 };
 
-export default Link;
+export default Links;

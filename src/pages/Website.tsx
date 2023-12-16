@@ -1,8 +1,7 @@
-import Badge from "../components/Badge/Badge";
-// import Link from "../components/Link/Link";
+import Lists from "../components/Website/Lists";
 
 const Website = () => {
-  return <Badge />;
+  return <Lists />;
 };
 
 export default Website;

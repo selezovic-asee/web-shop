@@ -1,7 +1,6 @@
-import "./Badge.css";
-import "../../../webSite/css/styles.css";
+import "./Styles.css";
 
-const Badge = () => {
+const Badges = () => {
   return (
     <>
       <span className="badge badge--primary">10% Off</span>
@@ -11,4 +10,4 @@ const Badge = () => {
   );
 };
 
-export default Badge;
+export default Badges;
