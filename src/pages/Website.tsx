@@ -1,7 +1,7 @@
-import Buttons from "../components/Website/Buttons";
+import Inputs from "../components/Website/Inputs";
 
 const Website = () => {
-  return <Buttons />;
+  return <Inputs />;
 };
 
 export default Website;
