@@ -1,7 +1,7 @@
-import Lists from "../components/Website/Lists";
+import Icons from "../components/Website/Icons";
 
 const Website = () => {
-  return <Lists />;
+  return <Icons />;
 };
 
 export default Website;
