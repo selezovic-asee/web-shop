@@ -1,7 +1,7 @@
-import Icons from "../components/Website/Icons";
+import Buttons from "../components/Website/Buttons";
 
 const Website = () => {
-  return <Icons />;
+  return <Buttons />;
 };
 
 export default Website;
