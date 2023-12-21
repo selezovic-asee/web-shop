@@ -3,6 +3,7 @@ import formatCurrency from "../../utilities/formatCurrency";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./StoreItem.css";
 import { Product } from "../../hooks/useProducts";
+import { useEffect } from "react";
 
 const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
   const {
@@ -15,11 +16,7 @@ const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
 
   const quantity = getItemQuantity(id);
 
-  // if (category) {
   setCategoryProduct(category);
-  // } else {
-  //   setCategoryProduct("");
-  // }
 
   return (
     <Card className="card-item bg-light h-100">

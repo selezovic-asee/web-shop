@@ -1,9 +1,8 @@
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useProducts from "../hooks/useProducts";
 import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
-import { useEffect } from "react";
 
 const Store = () => {
   const { inputValue, categoryProduct, setCategoryProduct } = useShoppingCart();
@@ -13,15 +12,6 @@ const Store = () => {
     error: Error,
     isLoading: IsLoading,
   } = useSearchInput(inputValue);
-
-  // console.log(categoryProduct);
-  // console.log(Data);
-
-  // const findCategory = Data.find((product) => product.category === inputValue);
-
-  // console.log("Category: " + findCategory?.category);
-
-  // console.log("Value: " + inputValue);
 
   return (
     <>

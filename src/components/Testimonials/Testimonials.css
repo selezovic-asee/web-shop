@@ -5,8 +5,8 @@
     box-shadow: 0 0 20px 30px gray;
     font-size: 1rem;
     font-weight: 600;
-    margin: 0 2rem;
-    max-width: 500px;
+    margin: 1.5rem 2rem;
+    max-width: 400px;
     overflow: hidden;
     transform: rotate(-5deg);
     transition: transform .2s;

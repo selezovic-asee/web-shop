@@ -68,7 +68,7 @@ const NavBar = () => {
               style={{ width: "48px", height: "48px" }}
             ></span>
           ))}
-        {windowSize[0] < 1024 && <ColorModeSwitch />}
+        {/* {windowSize[0] < 1024 && <ColorModeSwitch />} */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <div
           className="d-flex justify-content-between"
@@ -109,9 +109,6 @@ const NavBar = () => {
                 </Nav>
               </DropdownButton>
               <Nav>
-                <Nav.Link to="/website" as={NavLink}>
-                  Website
-                </Nav.Link>
                 <Nav.Link to="/" as={NavLink}>
                   Home
                 </Nav.Link>
@@ -196,7 +193,7 @@ const NavBar = () => {
             </div>
           )}
 
-          {windowSize[0] >= 1024 && <ColorModeSwitch />}
+          {/* {windowSize[0] >= 1024 && <ColorModeSwitch />} */}
         </div>
       </Container>
     </Navbar>

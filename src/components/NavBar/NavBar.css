@@ -30,7 +30,7 @@
     }
 }
 
-@media all and (max-width: 374px) {
+/* @media all and (max-width: 374px) {
     .logoShop {
         width: 15px;
         height: 15px;
@@ -39,7 +39,7 @@
     .brand {
         margin: 3px;
     }
-}
+} */
 
 @media all and (min-width: 992px) {
     .dropdownLayout {

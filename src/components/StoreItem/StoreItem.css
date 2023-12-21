@@ -13,7 +13,7 @@
     font-size: 2rem;
     font-weight: 600;
     margin: 0 2rem;
-    max-width: 500px;
+    max-width: 400px;
     overflow: hidden;
     transform: rotate(-3deg);
     transition: transform .2s;
