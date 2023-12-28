@@ -1,5 +1,5 @@
-import { Container } from "react-bootstrap";
 import { Route, Routes } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import BagList from "./pages/BagList";
@@ -16,10 +16,7 @@ import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import NavBar from "./components/NavBar/NavBar";
-import Website from "./pages/Home/Home";
 
-/* style={{ borderRadius: "30px" }} and Container*/
 function App() {
   return (
     <ShoppingCartProvider>

@@ -1,6 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useBag from "../hooks/useBag";
+import "./Pages.css";
 
 const SkincareList = () => {
   const { data, isLoading, error } = useBag();
@@ -13,10 +14,7 @@ const SkincareList = () => {
         <p className="text-danger d-flex justify-content-center">{error}</p>
       )}
       {isLoading && (
-        <div
-          className="d-flex justify-content-center align-items-center"
-          style={{ height: "600px" }}
-        >
+        <div className="isloadingPosition d-flex justify-content-center align-items-center">
           <div className="spinner-border"></div>
         </div>
       )}

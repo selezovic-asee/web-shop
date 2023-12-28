@@ -27,6 +27,10 @@
     margin-top: 10px;
 }
 
+.trending {
+    height: 200px;
+}
+
 hr {
     background: black;
     height: 1px;

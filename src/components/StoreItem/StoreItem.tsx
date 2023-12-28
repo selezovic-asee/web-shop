@@ -1,9 +1,8 @@
 import { Button, Card } from "react-bootstrap";
-import formatCurrency from "../../utilities/formatCurrency";
-import useShoppingCart from "../../hooks/useShoppingCart";
-import "./StoreItem.css";
 import { Product } from "../../hooks/useProducts";
-import { useEffect } from "react";
+import useShoppingCart from "../../hooks/useShoppingCart";
+import formatCurrency from "../../utilities/formatCurrency";
+import "./StoreItem.css";
 
 const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
   const {

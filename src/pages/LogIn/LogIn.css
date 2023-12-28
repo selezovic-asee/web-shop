@@ -9,6 +9,19 @@
     color: #fff;
 }
 
+.isLoading {
+    height: 600px;
+}
+
+.loginBoxPosition {
+    height: 300px;
+}
+
+.loginBoxSize {
+    width: 600px;
+    height: 250px;
+}
+
 @media all and (max-width: 425px) {
     .contentLogIn {
         font-size: 12px;

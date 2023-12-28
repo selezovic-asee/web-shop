@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import SearchInput from "../SearchInput";
 import "./NavBar.css";
-import ColorModeSwitch from "../ColorModeSwitch";
 
 const NavBar = () => {
   const { openCart, cartQuantity, profile, setInputValue, logOut } =
@@ -64,16 +63,12 @@ const NavBar = () => {
             </Button>
           ) : (
             <span
-              className="mx-2"
-              style={{ width: "48px", height: "48px" }}
+              className="cart mx-2"
+              // style={{ width: "48px", height: "48px" }}
             ></span>
           ))}
-        {/* {windowSize[0] < 1024 && <ColorModeSwitch />} */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <div
-          className="d-flex justify-content-between"
-          style={{ width: "100%" }}
-        >
+        <div className="navbar d-flex justify-content-between">
           <Navbar.Collapse id="basic-navbar-nav">
             <div className="dropdownLayout ps-2">
               <DropdownButton
@@ -125,7 +120,6 @@ const NavBar = () => {
                 <NavDropdown
                   title="My account"
                   id="navbarScrollingDropdown"
-                  // className="d-flex justify-content-center"
                   style={{ width: "160px" }}
                 >
                   <div className="ps-4">
@@ -147,7 +141,6 @@ const NavBar = () => {
                 </NavDropdown>
               </Nav>
             </div>
-            {/* </div> */}
           </Navbar.Collapse>
           {windowSize[0] > 991 && (
             <div className="d-flex">
@@ -175,15 +168,10 @@ const NavBar = () => {
                   </div>
                 </Button>
               ) : (
-                <span
-                  className="mx-2"
-                  style={{ width: "48px", height: "48px" }}
-                ></span>
+                <span className="cart mx-2"></span>
               )}
             </div>
           )}
-
-          {/* {windowSize[0] >= 1024 && <ColorModeSwitch />} */}
         </div>
       </Container>
     </Navbar>

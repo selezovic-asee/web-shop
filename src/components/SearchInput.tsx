@@ -77,30 +77,6 @@ const SearchInput = () => {
       </Nav>
     </form>
   );
-  // <form
-  //   onSubmit={(event) => {
-  //     event.preventDefault();
-  //     if (ref.current) {
-  //       setInputValue(ref.current.value);
-  //       ref.current.value = "";
-  //     }
-  //   }}
-  // >
-  //   <Nav>
-  //     <Nav.Link to="/store" as={NavLink}>
-  //       <InputGroup>
-  //         <InputLeftElement children={<BsSearch />} />
-  //         <Input
-  //           ref={ref}
-  //           borderRadius={20}
-  //           placeholder="Search products..."
-  //           variant="filled"
-  //           width="20rem"
-  //         />
-  //       </InputGroup>
-  //     </Nav.Link>
-  //   </Nav>
-  // </form>
 };
 
 export default SearchInput;

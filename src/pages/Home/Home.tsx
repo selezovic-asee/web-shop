@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import "./Home.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "./Home.css";
 
 const Website = () => {
   useEffect(() => {

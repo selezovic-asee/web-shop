@@ -1,7 +1,6 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import Testimonials from "../../components/Testimonials/Testimonials";
-// import "./Home.css";
 import "./Trending.css";
 
 const Trending = () => {
@@ -15,9 +14,8 @@ const Trending = () => {
         <h1 data-aos="fade-down">What's trending?</h1>
       </div>
       <div
-        className="d-flex justify-content-evenly"
+        className="trending d-flex justify-content-evenly"
         data-aos="flip-up"
-        style={{ height: "200px" }}
       >
         <a
           href="https://www.sportskeeda.com/gaming-tech/best-upcoming-phones-2024"

@@ -1,4 +1,18 @@
 
-.heightPayment {
-    height: 650px;
+.getStarted {
+    margin-right: 1020px;
+    margin-top: 50px;
+}
+
+.accountUse {
+    margin-right: 830px;
+}
+
+.loggedProfile {
+    width: 490px;
+    height: 60px;
+    display: inline-block;
+    margin-right: 630px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }

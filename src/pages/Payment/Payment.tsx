@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import formatCurrency from "../../utilities/formatCurrency";
+import "./Payment.css";
 
 const Payment = () => {
   const { cartItems, data: products, profile } = useShoppingCart();
@@ -35,23 +36,9 @@ const Payment = () => {
         className="heightPayment d-flex flex-column align-items-center bg-light"
         data-aos="zoom-in"
       >
-        <h5 style={{ marginRight: "1020px", marginTop: "50px" }}>
-          Get started
-        </h5>
-        <p style={{ marginRight: "830px" }}>
-          Use this account to access your purchase.
-        </p>
-        <div
-          className="bg-white d-flex align-items-center"
-          style={{
-            width: "490px",
-            height: "60px",
-            display: "inline-block",
-            marginRight: "630px",
-            marginTop: "20px",
-            marginBottom: "40px",
-          }}
-        >
+        <h5 className="getStarted">Get started</h5>
+        <p className="accountUse">Use this account to access your purchase.</p>
+        <div className="loggedProfile bg-white d-flex align-items-center">
           <p className="ps-4">
             You are logged in as <strong>{profile.email}</strong>
           </p>

@@ -3,10 +3,7 @@ import "./Testimonials.css";
 
 const Testimonials = () => {
   return (
-    <div
-      className="d-flex align-items-start flex-column"
-      style={{ height: "750px" }}
-    >
+    <div className="cards d-flex align-items-start flex-column">
       <Row md={2} xs={1} lg={3} className="g-5">
         <Col>
           <div className="cardTestimonials">

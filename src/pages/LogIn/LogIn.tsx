@@ -1,10 +1,10 @@
-import { Button } from "react-bootstrap";
-import useShoppingCart from "../../hooks/useShoppingCart";
-import { Navigate } from "react-router-dom";
-import "./LogIn.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Button } from "react-bootstrap";
+import { Navigate } from "react-router-dom";
+import useShoppingCart from "../../hooks/useShoppingCart";
+import "./LogIn.css";
 
 const LogIn = () => {
   const { login, profile, isLoading } = useShoppingCart();
@@ -17,24 +17,17 @@ const LogIn = () => {
     <>
       <div className="bgLogIn">
         {isLoading && (
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{ height: "600px" }}
-          >
+          <div className="isLoading d-flex justify-content-center align-items-center">
             <div className="spinner-border"></div>
           </div>
         )}
         {!profile ? (
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{ height: "300px" }}
-          >
+          <div className="loginBoxPosition d-flex justify-content-center align-items-center">
             <div
-              className="d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white"
+              className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white"
               data-aos="fade-down"
               data-aos-offset="500"
               data-aos-duration="500"
-              style={{ width: "600px", height: "250px" }}
             >
               <h2 className="contentLogIn pt-5">Login to the user account.</h2>
               <br />

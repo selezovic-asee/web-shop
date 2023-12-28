@@ -35,15 +35,7 @@ const ShoppingCart = ({ isOpen }: Props) => {
           {cart === "$0.00" && (
             <h4 className="text-center">Your cart is empty.</h4>
           )}
-          <div className="ms-auto fw-bold fs-5">
-            Total {cart}
-            {/* {formatCurrency(
-              cartItems.reduce((total, cartItem) => {
-                const item = products.find((item) => item.id === cartItem.id);
-                return total + (item?.price || 0) * cartItem.quantity;
-              }, 0)
-            )} */}
-          </div>
+          <div className="ms-auto fw-bold fs-5">Total {cart}</div>
         </Stack>
         <Nav>
           {!profile ? (

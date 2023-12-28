@@ -1,11 +1,12 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useProducts from "../hooks/useProducts";
 import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import "./Pages.css";
 
 const Store = () => {
   const { inputValue, categoryProduct } = useShoppingCart();
@@ -32,10 +33,7 @@ const Store = () => {
             <p className="text-danger d-flex justify-content-center">{error}</p>
           )}
           {isLoading && (
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ height: "600px" }}
-            >
+            <div className="isloadingPosition d-flex justify-content-center align-items-center">
               <div className="spinner-border"></div>
             </div>
           )}
@@ -62,10 +60,7 @@ const Store = () => {
               </h5>
             </div>
           ) : (
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ height: "600px" }}
-            >
+            <div className="noneProducts d-flex justify-content-center align-items-center">
               <h5>Sorry, we did not find any products for your search.</h5>
             </div>
           )}
@@ -74,10 +69,7 @@ const Store = () => {
             <p className="text-danger d-flex justify-content-center">{error}</p>
           )}
           {IsLoading && (
-            <div
-              className="d-flex justify-content-center align-items-center"
-              style={{ height: "600px" }}
-            >
+            <div className="isloadingPosition d-flex justify-content-center align-items-center">
               <div className="spinner-border"></div>
             </div>
           )}

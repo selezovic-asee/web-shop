@@ -1,6 +1,7 @@
-import { Row, Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useLighting from "../hooks/useLighting";
+import "./Pages.css";
 
 const LightingList = () => {
   const { data, isLoading, error } = useLighting();
@@ -15,10 +16,7 @@ const LightingList = () => {
         <p className="text-danger d-flex justify-content-center">{error}</p>
       )}
       {isLoading && (
-        <div
-          className="d-flex justify-content-center align-items-center"
-          style={{ height: "600px" }}
-        >
+        <div className="isloadingPosition d-flex justify-content-center align-items-center">
           <div className="spinner-border"></div>
         </div>
       )}

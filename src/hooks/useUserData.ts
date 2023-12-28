@@ -1,7 +1,6 @@
-import { useGoogleLogin, googleLogout } from "@react-oauth/google";
+import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const useUserData = () => {
     const [user, setUser] = useState<any>([]);
