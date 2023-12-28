@@ -1,7 +1,11 @@
+
+p {
+    margin-bottom: 0;
+}
+
 .registration {
     background-image: url(../../../public/imgs/LogOutPage.jpg);
-    background-size: auto;
-    /* border-radius: 30px; */
+    background-size: cover;
     height: 100vh;
 }
 
@@ -12,6 +16,4 @@
     margin-top: 50px;
 }
 
-p {
-    margin-bottom: 0;
-}
+

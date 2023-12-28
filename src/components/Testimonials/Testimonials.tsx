@@ -113,10 +113,6 @@ const Testimonials = () => {
           </div>
         </Col>
       </Row>
-      {/* <div className="1row mb-auto d-flex"> */}
-      {/* </div> */}
-      {/* <div className="2row d-flex"> */}
-      {/* </div> */}
     </div>
   );
 };

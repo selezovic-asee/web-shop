@@ -1,9 +1,12 @@
 
 .bgLogIn {
     background-image: url(../../../public/imgs/LogInPage.jpg);
-    background-size: auto;
-    /* border-radius: 30px; */
+    background-size: cover;
     height: 100vh;
+}
+
+.contentLogIn {
+    color: #fff;
 }
 
 @media all and (max-width: 425px) {

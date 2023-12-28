@@ -29,7 +29,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" className=" bg-body-tertiary">
+    <Navbar sticky="top" expand="lg" className="bg-body-tertiary shadow-sm">
       <Container style={{ width: "100%" }}>
         <Navbar.Brand className="brand">
           <Nav>
@@ -152,16 +152,6 @@ const NavBar = () => {
           {windowSize[0] > 991 && (
             <div className="d-flex">
               <SearchInput />
-              {/* {isAuth ? (
-                <p className="d-flex align-items-center mb-0 mx-2">
-                  Hello {profile.given_name}!
-                </p>
-                          ) : (
-                <span
-                  className="mx-2"
-                  style={{ width: "93.02px", height: "48px" }}
-                ></span>
-                          )} */}
               {cartQuantity > 0 ? (
                 <Button
                   onClick={openCart}
