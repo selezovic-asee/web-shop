@@ -4,7 +4,7 @@ p {
 }
 
 .registration {
-    background-image: url(../../../public/imgs/LogOutPage.jpg);
+    background-image: url(../../../imgs/LogOutPage.jpg);
     background-size: cover;
     height: 100vh;
 }

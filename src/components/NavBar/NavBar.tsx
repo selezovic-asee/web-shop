@@ -33,11 +33,7 @@ const NavBar = () => {
         <Navbar.Brand className="brand">
           <Nav>
             <Nav.Link to="/" as={NavLink}>
-              <img
-                className="logoShop"
-                src="public/logo/navBar.svg"
-                alt="logo"
-              />
+              <img className="logoShop" src="logo/AGlogo.png" alt="logo" />
             </Nav.Link>
           </Nav>
         </Navbar.Brand>

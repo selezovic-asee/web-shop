@@ -23,7 +23,7 @@ const Trending = () => {
           target="_blank"
           className="mobile"
         >
-          <img src="public/imgs/mobile.jpg" alt="mobile" />
+          <img src="imgs/mobile.jpg" alt="mobile" />
         </a>
         <a
           href="https://www.eatingwell.com/article/15806/the-dirty-dozen-12-foods-you-should-buy-organic/"
@@ -31,7 +31,7 @@ const Trending = () => {
           target="_blank"
           className="organic"
         >
-          <img src="public/imgs/organic.png" alt="mobile" />
+          <img src="imgs/organic.png" alt="mobile" />
         </a>
         <a
           href="https://www.cosmopolitan.com/style-beauty/beauty/g26477382/best-perfumes/"
@@ -39,7 +39,7 @@ const Trending = () => {
           target="_blank"
           className="perfume"
         >
-          <img className="perfume" src="public/imgs/perfume.png" alt="mobile" />
+          <img className="perfume" src="imgs/perfume.png" alt="mobile" />
         </a>
       </div>
       <div className="d-flex justify-content-center mb-5">
@@ -160,7 +160,7 @@ const Trending = () => {
           <div className="footer__brand">
             <img
               className="footer__logo"
-              src="public/logo/bags.svg"
+              src="logo/bags.svg"
               alt="Brand image"
             />
             <p className="footer__copyright">Copyright 2023</p>

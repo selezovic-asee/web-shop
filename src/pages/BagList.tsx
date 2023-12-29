@@ -124,7 +124,7 @@ const SkincareList = () => {
           <div className="footer__brand">
             <img
               className="footer__logo"
-              src="public/logo/bags.svg"
+              src="logo/bags.svg"
               alt="Brand image"
             />
             <p className="footer__copyright">Copyright 2023</p>

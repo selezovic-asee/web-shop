@@ -30,7 +30,7 @@ const Website = () => {
           </header>
           <img
             className="HeaderImg"
-            src="public/imgs/homePage.jpg"
+            src="imgs/homePage.jpg"
             alt="home page"
             data-aos="zoom-in-left"
           />
@@ -63,7 +63,7 @@ const Website = () => {
           </div>
           <img
             className="MainImg"
-            src="public/imgs/ethical.jpg"
+            src="imgs/ethical.jpg"
             alt="home page"
             data-aos="zoom-in-left"
           />
@@ -73,7 +73,7 @@ const Website = () => {
         <article className="grid grid--1x2 feature feature__alt">
           <img
             className="MainImg"
-            src="public/imgs/brands.png"
+            src="imgs/brands.png"
             alt="home page"
             data-aos="zoom-in-right"
           />
@@ -113,7 +113,7 @@ const Website = () => {
 
           <img
             className="MainImg"
-            src="public/imgs/brandDirectory.jpg"
+            src="imgs/brandDirectory.jpg"
             alt="home page"
             data-aos="zoom-in-left"
           />
@@ -219,7 +219,7 @@ const Website = () => {
           <div className="footer__brand">
             <img
               className="footer__logo"
-              src="public/logo/bags.svg"
+              src="logo/bags.svg"
               alt="Brand image"
             />
             <p className="footer__copyright">Copyright 2023</p>

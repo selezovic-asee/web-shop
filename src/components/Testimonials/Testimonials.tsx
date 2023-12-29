@@ -14,11 +14,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img
-                alt="user.jpg"
-                src="public/imgs/Marija.jpg"
-                className="thumb"
-              />
+              <img alt="user.jpg" src="imgs/Marija.jpg" className="thumb" />
               <span>Marija Horvat</span>
             </footer>
           </div>
@@ -32,11 +28,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img
-                alt="user.jpg"
-                src="public/imgs/Martina.jpg"
-                className="thumb"
-              />
+              <img alt="user.jpg" src="imgs/Martina.jpg" className="thumb" />
               <span>Martina Toš</span>
             </footer>
           </div>
@@ -50,11 +42,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img
-                alt="user.jpg"
-                src="public/imgs/Luka.jpg"
-                className="thumb"
-              />
+              <img alt="user.jpg" src="imgs/Luka.jpg" className="thumb" />
               <span>Luka Matić</span>
             </footer>
           </div>
@@ -68,11 +56,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img
-                alt="user.jpg"
-                src="public/imgs/David.jpg"
-                className="thumb"
-              />
+              <img alt="user.jpg" src="imgs/David.jpg" className="thumb" />
               <span>David Marković</span>
             </footer>
           </div>
@@ -86,7 +70,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img alt="user.jpg" src="public/imgs/Ana.jpg" className="thumb" />
+              <img alt="user.jpg" src="imgs/Ana.jpg" className="thumb" />
               <span>Ana Babić</span>
             </footer>
           </div>
@@ -100,11 +84,7 @@ const Testimonials = () => {
               </p>
             </div>
             <footer className="cardTestimonials-footer">
-              <img
-                alt="user.jpg"
-                src="public/imgs/Jelena.jpg"
-                className="thumb"
-              />
+              <img alt="user.jpg" src="imgs/Jelena.jpg" className="thumb" />
               <span>Jelena Brcković</span>
             </footer>
           </div>
