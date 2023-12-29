@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Nav } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import { NavLink, Navigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useShoppingCart from "../../hooks/useShoppingCart";
@@ -36,7 +36,7 @@ const Registration = () => {
           data-aos="fade-down-right"
         >
           <Nav.Link to="/store" as={NavLink}>
-            Go to shop!
+            <Button>Go to shop!</Button>
           </Nav.Link>
         </Nav>
       </div>

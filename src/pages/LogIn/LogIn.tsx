@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./LogIn.css";
@@ -33,13 +33,18 @@ const LogIn = () => {
               <br />
               <br />
               <>
-                <p className="contentLogIn">
+                <p className="contentLogIn mb-1">
                   Registering allows you to make purchases/orders.
                 </p>
                 <br />
                 <Button id="login" onClick={() => login()}>
                   Sign in with Google
                 </Button>
+                {/* <Nav.Link onClick={() => login()}>
+                  <a href="#" className="HpBtn HpBtn--accent HpBtn--streched">
+                    I'm ready to shop
+                  </a>
+                </Nav.Link> */}
               </>
             </div>
           </div>
