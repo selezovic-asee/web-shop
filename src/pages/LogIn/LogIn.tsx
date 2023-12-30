@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Button, Nav } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import "./LogIn.css";

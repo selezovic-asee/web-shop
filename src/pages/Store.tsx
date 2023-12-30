@@ -17,6 +17,8 @@ const Store = () => {
     isLoading: IsLoading,
   } = useSearchInput(inputValue);
 
+  console.log("Value: " + inputValue);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -64,7 +66,6 @@ const Store = () => {
               <h5>Sorry, we did not find any products for your search.</h5>
             </div>
           )}
-          {/* <h1 className="d-flex justify-content-center">Shop</h1> */}
           {Error && (
             <p className="text-danger d-flex justify-content-center">{error}</p>
           )}

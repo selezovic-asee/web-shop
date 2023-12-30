@@ -9,7 +9,7 @@ import "../Pages.css";
 import "./Registration.css";
 
 const Registration = () => {
-  const { profile, isLoading } = useShoppingCart();
+  const { profile, isLoading, setInputValue } = useShoppingCart();
   const isAuth = useAuth();
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Registration = () => {
           data-aos="fade-down-right"
         >
           <Nav.Link to="/store" as={NavLink}>
-            <Button>Go to shop!</Button>
+            <Button onClick={() => setInputValue("")}>Go to shop!</Button>
           </Nav.Link>
         </Nav>
       </div>

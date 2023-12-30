@@ -1,5 +1,6 @@
-import { Nav } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "./Pages.css";
 
 const NoPage = () => {
   return (
@@ -11,13 +12,10 @@ const NoPage = () => {
       </h3>
       <Nav className="d-flex justify-content-center align-items-end">
         <Nav.Link to="/" as={NavLink}>
-          Go to home page
+          <Button>Go to home page</Button>
         </Nav.Link>
       </Nav>
-      <footer
-        className="HpBlock HpBlock--dark footer"
-        style={{ marginTop: "110px" }}
-      >
+      <footer className="noPageFooter HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">
           <section className="footer__section">
             <div>
