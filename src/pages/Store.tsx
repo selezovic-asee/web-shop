@@ -6,6 +6,7 @@ import StoreItem from "../components/StoreItem/StoreItem";
 import useProducts from "../hooks/useProducts";
 import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
+import NoneProduct from "./NoneProduct";
 import "./Pages.css";
 
 const Store = () => {
@@ -62,9 +63,7 @@ const Store = () => {
               </h5>
             </div>
           ) : (
-            <div className="noneProducts d-flex justify-content-center align-items-center">
-              <h5>Sorry, we did not find any products for your search.</h5>
-            </div>
+            <NoneProduct />
           )}
           {Error && (
             <p className="text-danger d-flex justify-content-center">{error}</p>
