@@ -69,7 +69,7 @@ const Website = () => {
           />
         </article>
       </section>
-      <div className="HpBlock container">
+      {/* <div className="HpBlock container">
         <article className="grid grid--1x2 feature feature__alt">
           <img
             className="MainImg"
@@ -93,7 +93,7 @@ const Website = () => {
             </a>
           </div>
         </article>
-      </div>
+      </div> */}
       <div className="HpBlock container">
         <article className="grid grid--1x2 feature feature__alt">
           <div className="feature__content" data-aos="fade-right">

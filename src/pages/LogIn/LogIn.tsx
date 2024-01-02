@@ -22,7 +22,7 @@ const LogIn = () => {
           </div>
         )}
         {!profile ? (
-          <div className="loginBoxPosition d-flex justify-content-center align-items-center">
+          <div className="loginBoxPosition d-flex justify-content-center">
             <div
               className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white"
               data-aos="fade-down"
@@ -40,11 +40,6 @@ const LogIn = () => {
                 <Button id="login" onClick={() => login()}>
                   Sign in with Google
                 </Button>
-                {/* <Nav.Link onClick={() => login()}>
-                  <a href="#" className="HpBtn HpBtn--accent HpBtn--streched">
-                    I'm ready to shop
-                  </a>
-                </Nav.Link> */}
               </>
             </div>
           </div>

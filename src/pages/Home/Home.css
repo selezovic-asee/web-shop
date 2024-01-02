@@ -338,6 +338,11 @@ a {
   margin-top: .65rem;
 }
 
+.footer__logo {
+  width: 50px;
+  height: 50px;
+}
+
 @media screen and (min-width: 768px) {
   .footer {
     font-size: .95rem;
@@ -356,10 +361,7 @@ a {
     order: -1;
     margin-top: .65rem;
   }
-  .footer__logo {
-    width: 50px;
-    height: 50px;
-  }
+  
   .footer__copyright {
     font-size: .95rem;
   }
