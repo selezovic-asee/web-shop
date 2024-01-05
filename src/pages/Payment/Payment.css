@@ -35,57 +35,57 @@
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
     .loggedProfile {
-        margin-left: 770px;
+        margin-left: 48.125rem;
     }
     
     .getStarted {
-        margin-left: 770px;
+        margin-left: 48.125rem;
     }
     
     .accountUse {
-        margin-left: 770px;
+        margin-left: 48.125rem;
     }
 }
 
 @media screen and (min-width: 425px) and (max-width: 768px) {
     .loggedProfile {
-        margin-left: 720px;
+        margin-left: 45rem;
     }
     
     .getStarted {
-        margin-left: 720px;
+        margin-left: 45rem;
     }
     
     .accountUse {
-        margin-left: 720px;
+        margin-left: 45rem;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .loggedProfile {
-        margin-left: 380px;
+        margin-left: 23.75rem;
     }
     
     .getStarted {
-        margin-left: 380px;
+        margin-left: 23.75rem;
     }
     
     .accountUse {
-        margin-left: 380px;
+        margin-left: 23.75rem;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .loggedProfile {
-        margin-left: 120px;
+        margin-left: 7.5rem;
     }
     
     .getStarted {
-        margin-left: 120px;
+        margin-left: 7.5rem;
     }
     
     .accountUse {
-        margin-left: 120px;
+        margin-left: 7.5rem;
     }
 }
 
