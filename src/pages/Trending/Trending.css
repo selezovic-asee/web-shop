@@ -31,7 +31,38 @@
     height: 200px;
 }
 
+
 hr {
     background: black;
     height: 1px;
+}
+
+@media screen and (max-width: 375px) {
+    .trendingPageHeight {
+        height: 3050px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .trendingPageHeight {
+        height: 2900px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .trendingPageHeight {
+        height: 2750px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .trendingPageHeight {
+        height: 2000px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .trendingPageHeight {
+        height: 1600px;
+    }
 }
