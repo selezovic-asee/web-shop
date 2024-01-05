@@ -18,10 +18,9 @@ const Store = () => {
     isLoading: IsLoading,
   } = useSearchInput(inputValue);
 
-  window.scroll(0, 0);
-
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
   }, []);
 
   return (

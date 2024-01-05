@@ -1,104 +1,14 @@
 
 .getStarted {
-    margin-right: 63.75rem;
     margin-top: 3.125rem ;
-    white-space: nowrap;
-}
-
-.accountUse {
-    margin-right: 51.875rem;
-    white-space: nowrap;
-}
-
-.loggedProfile {
-    width: 30.625rem;
-    height: 3.75rem;
-    display: inline-block;
-    margin-right: 39.375rem;
-    margin-top: 1.25rem;
     margin-bottom: 2.5rem;
 }
 
-@media screen and (max-width: 375px) {
-    .loggedProfile {
-        margin-left: 830px;
-    }
-    
-    .getStarted {
-        margin-left: 830px;
-    }
-    
-    .accountUse {
-        margin-left: 830px;
-    }
+.loggedProfile {
+    width: 21.875rem;
+    height: 3.75rem;
+    margin-top: .5rem;
+    margin-bottom: 2.5rem;
+    padding-left: 1.875rem;
 }
 
-@media screen and (min-width: 375px) and (max-width: 425px) {
-    .loggedProfile {
-        margin-left: 48.125rem;
-    }
-    
-    .getStarted {
-        margin-left: 48.125rem;
-    }
-    
-    .accountUse {
-        margin-left: 48.125rem;
-    }
-}
-
-@media screen and (min-width: 425px) and (max-width: 768px) {
-    .loggedProfile {
-        margin-left: 45rem;
-    }
-    
-    .getStarted {
-        margin-left: 45rem;
-    }
-    
-    .accountUse {
-        margin-left: 45rem;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .loggedProfile {
-        margin-left: 23.75rem;
-    }
-    
-    .getStarted {
-        margin-left: 23.75rem;
-    }
-    
-    .accountUse {
-        margin-left: 23.75rem;
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-    .loggedProfile {
-        margin-left: 7.5rem;
-    }
-    
-    .getStarted {
-        margin-left: 7.5rem;
-    }
-    
-    .accountUse {
-        margin-left: 7.5rem;
-    }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
-    .loggedProfile {
-        margin-left: 0;
-    }
-    
-    .getStarted {
-        margin-left: 0;
-    }
-    
-    .accountUse {
-        margin-left: 0;
-    }
-}

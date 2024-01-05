@@ -66,3 +66,9 @@ hr {
         height: 1600px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .trendingPageHeight {
+        padding-left: 10px;
+    }
+}
