@@ -1,18 +1,104 @@
 
 .getStarted {
-    margin-right: 1020px;
-    margin-top: 50px;
+    margin-right: 63.75rem;
+    margin-top: 3.125rem ;
+    white-space: nowrap;
 }
 
 .accountUse {
-    margin-right: 830px;
+    margin-right: 51.875rem;
+    white-space: nowrap;
 }
 
 .loggedProfile {
-    width: 490px;
-    height: 60px;
+    width: 30.625rem;
+    height: 3.75rem;
     display: inline-block;
-    margin-right: 630px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-right: 39.375rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 375px) {
+    .loggedProfile {
+        margin-left: 830px;
+    }
+    
+    .getStarted {
+        margin-left: 830px;
+    }
+    
+    .accountUse {
+        margin-left: 830px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .loggedProfile {
+        margin-left: 770px;
+    }
+    
+    .getStarted {
+        margin-left: 770px;
+    }
+    
+    .accountUse {
+        margin-left: 770px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .loggedProfile {
+        margin-left: 720px;
+    }
+    
+    .getStarted {
+        margin-left: 720px;
+    }
+    
+    .accountUse {
+        margin-left: 720px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .loggedProfile {
+        margin-left: 380px;
+    }
+    
+    .getStarted {
+        margin-left: 380px;
+    }
+    
+    .accountUse {
+        margin-left: 380px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .loggedProfile {
+        margin-left: 120px;
+    }
+    
+    .getStarted {
+        margin-left: 120px;
+    }
+    
+    .accountUse {
+        margin-left: 120px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .loggedProfile {
+        margin-left: 0;
+    }
+    
+    .getStarted {
+        margin-left: 0;
+    }
+    
+    .accountUse {
+        margin-left: 0;
+    }
 }

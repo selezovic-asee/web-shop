@@ -41,7 +41,7 @@ const Payment = () => {
         <h5 className="getStarted">Get started</h5>
         <p className="accountUse">Use this account to access your purchase.</p>
         <div className="loggedProfile bg-white d-flex align-items-center">
-          <p className="ps-4">
+          <p>
             You are logged in as <strong>{profile.email}</strong>
           </p>
         </div>
