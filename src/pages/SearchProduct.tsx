@@ -8,6 +8,8 @@ const SearchProduct = () => {
   const { inputValue } = useShoppingCart();
   const { data, error, isLoading } = useSearchInput(inputValue);
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Shop</h1>

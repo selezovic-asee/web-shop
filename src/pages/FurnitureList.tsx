@@ -6,6 +6,8 @@ import "./Pages.css";
 const FurnitureList = () => {
   const { data, isLoading, error } = useFurniture();
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Furniture</h1>

@@ -12,6 +12,8 @@ const Registration = () => {
   const { profile, isLoading, setInputValue } = useShoppingCart();
   const isAuth = useAuth();
 
+  window.scroll(0, 0);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

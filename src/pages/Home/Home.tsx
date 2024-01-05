@@ -10,6 +10,8 @@ const Website = () => {
     Aos.init({ duration: 1000 });
   }, []);
 
+  window.scroll(0, 0);
+
   return (
     <>
       <section className="HpBlock HpBlock--dark HpBlock--skewed-left banner">

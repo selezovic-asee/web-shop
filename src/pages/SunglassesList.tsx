@@ -6,6 +6,8 @@ import "./Pages.css";
 const JewelleryList = () => {
   const { data, isLoading, error } = useSunglasses();
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Sunglasses</h1>

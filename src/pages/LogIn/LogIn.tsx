@@ -9,6 +9,8 @@ import "./LogIn.css";
 const LogIn = () => {
   const { login, profile, isLoading } = useShoppingCart();
 
+  window.scroll(0, 0);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);

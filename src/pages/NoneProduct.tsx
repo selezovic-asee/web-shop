@@ -5,6 +5,8 @@ import useShoppingCart from "../hooks/useShoppingCart";
 const NoneProduct = () => {
   const { setInputValue } = useShoppingCart();
 
+  window.scroll(0, 0);
+
   return (
     <div className="noneProducts d-flex justify-content-center align-items-center">
       <div>

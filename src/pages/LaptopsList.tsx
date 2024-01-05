@@ -5,6 +5,9 @@ import "./Pages.css";
 
 const LaptopsList = () => {
   const { data, isLoading, error } = useLaptops();
+
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Laptops</h1>

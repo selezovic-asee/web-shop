@@ -6,7 +6,7 @@ import "./Pages.css";
 const LightingList = () => {
   const { data, isLoading, error } = useLighting();
 
-  console.log(data);
+  window.scroll(0, 0);
 
   return (
     <>

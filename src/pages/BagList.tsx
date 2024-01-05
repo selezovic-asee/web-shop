@@ -6,6 +6,8 @@ import "./Pages.css";
 const SkincareList = () => {
   const { data, isLoading, error } = useBag();
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Bags</h1>

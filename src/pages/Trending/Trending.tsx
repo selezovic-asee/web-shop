@@ -8,6 +8,8 @@ const Trending = () => {
     Aos.init({ duration: 1000 });
   }, []);
 
+  window.scroll(0, 0);
+
   return (
     <>
       <div className="d-flex justify-content-center p-5">

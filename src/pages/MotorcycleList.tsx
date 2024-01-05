@@ -6,6 +6,8 @@ import "./Pages.css";
 const MotorcycleList = () => {
   const { data, isLoading, error } = useMotorcycle();
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Motorcycle</h1>

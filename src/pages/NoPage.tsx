@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./Pages.css";
 
 const NoPage = () => {
+  window.scroll(0, 0);
+
   return (
     <div>
       <h3 className="noPageHeader d-flex justify-content-center align-items-center">

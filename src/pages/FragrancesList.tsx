@@ -6,6 +6,8 @@ import "./Pages.css";
 const FragrancesList = () => {
   const { data, isLoading, error } = useFragnaces();
 
+  window.scroll(0, 0);
+
   return (
     <>
       <h1 className="d-flex justify-content-center">Fragnances</h1>
