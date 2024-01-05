@@ -15,7 +15,7 @@ const NoPage = () => {
           <Button>Go to home page</Button>
         </Nav.Link>
       </Nav>
-      <footer className="noPageFooter HpBlock HpBlock--dark footer">
+      <footer className="HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">
           <section className="footer__section">
             <div>
@@ -27,7 +27,7 @@ const NoPage = () => {
                   <a href="#">Furniture</a>
                 </li>
                 <li>
-                  <a href="#">Home decoration</a>
+                  <a href="#">Decoration</a>
                 </li>
                 <li>
                   <a href="#">Multimedia</a>
@@ -67,24 +67,21 @@ const NoPage = () => {
           </section>
           <section className="footer__section">
             <div>
-              <h2 className="footer__heading">Contact and services</h2>
+              <h2 className="footer__heading">Services</h2>
             </div>
             <div>
               <ul className="list">
                 <li>
-                  <a href="#">Store locations</a>
+                  <a href="#">Payment</a>
                 </li>
                 <li>
-                  <a href="#">Payment methods and loans</a>
-                </li>
-                <li>
-                  <a href="#">Delivery and assembly</a>
+                  <a href="#">Delivery</a>
                 </li>
                 <li>
                   <a href="#">Reclamation</a>
                 </li>
                 <li>
-                  <a href="#">Web shop business conditions</a>
+                  <a href="#">Business</a>
                 </li>
               </ul>
             </div>
@@ -96,7 +93,7 @@ const NoPage = () => {
             <div>
               <ul className="list">
                 <li>
-                  <a href="#">Furnish the apartment</a>
+                  <a href="#">Furnish</a>
                 </li>
                 <li>
                   <a href="#">Catalogues</a>

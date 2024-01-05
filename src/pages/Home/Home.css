@@ -224,7 +224,7 @@ a {
 
 .HpBlock {
   --padding-vertical: 3.1rem;
-  padding: var(--padding-vertical) 1.2rem;
+  padding: var(--padding-vertical) ;
 }
 
 .HpBlock__header {
@@ -319,6 +319,7 @@ a {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.5;
+  white-space: nowrap;
 }
 
 .footer__brand {
@@ -377,12 +378,21 @@ a {
 
 /* Images */
 
-.MainImg {
+/* .MainImg {
   border-radius: var(--border-radius);
   width: 400px;
-}
+} */
 
 .HeaderImg {
   border-radius: var(--border-radius);
+  /* width: 200px;
+  height: 200px; */
+  /* margin-top: 40px; */
+}
+
+@media screen and (max-width: 425px) {
+  .HeaderImg {
+    margin-top: 40px;
+  }
 }
 
