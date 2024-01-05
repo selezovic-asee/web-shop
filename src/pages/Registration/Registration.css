@@ -4,15 +4,16 @@ p {
 }
 
 .registration {
-    background-image: url(../../../imgs/LogOutPage.jpg);
-    background-size: cover;
+    background-image: url(../../../background/registrationBg.svg);
+    background-attachment: fixed;
     height: 100vh;
 }
 
 .succsseful {
-    width: 300px;
+    color: white;
     height: 50px;
     margin-top: 50px;
+    width: 300px;
 }
 
 

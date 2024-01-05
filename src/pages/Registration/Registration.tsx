@@ -27,16 +27,13 @@ const Registration = () => {
           </div>
         )}
         <div className="succsseful d-flex justify-content-center align-items-center text-center">
-          <h6 className="ps-3" data-aos="fade-down-left">
+          <h6 className="ps-5 pt-5" data-aos="fade-down-left">
             Hello {profile.given_name},
             <br />
             you have successfully logged in!
           </h6>
         </div>
-        <Nav
-          className="d-flex justify-content-center align-items-center"
-          data-aos="fade-down-right"
-        >
+        <Nav className="d-flex align-items-center" data-aos="fade-down-right">
           <Nav.Link to="/store" as={NavLink}>
             <Button onClick={() => setInputValue("")}>Go to shop!</Button>
           </Nav.Link>
