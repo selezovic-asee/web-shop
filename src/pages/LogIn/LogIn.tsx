@@ -27,7 +27,7 @@ const LogIn = () => {
           <div className="loginBoxPosition d-flex justify-content-center">
             <div
               className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white"
-              data-aos="fade-down"
+              data-aos="zoom-in"
               data-aos-offset="500"
               data-aos-duration="2000"
             >
