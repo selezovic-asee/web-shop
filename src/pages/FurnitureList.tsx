@@ -13,7 +13,7 @@ const FurnitureList = () => {
 
   return (
     <>
-      <h1 className="d-flex justify-content-center mb-5">Furniture</h1>
+      <h1 className="d-flex justify-content-center mt-5">Furniture</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>

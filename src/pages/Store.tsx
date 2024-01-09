@@ -28,7 +28,7 @@ const Store = () => {
       {!inputValue ? (
         <>
           <h1
-            className="d-flex justify-content-center mb-5"
+            className="d-flex justify-content-center mt-5"
             data-aos="fade-down"
           >
             Shop
