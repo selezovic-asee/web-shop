@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useLighting from "../hooks/useLighting";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const LightingList = () => {
   const { data, isLoading, error } = useLighting();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

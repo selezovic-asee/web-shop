@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useFragnaces from "../hooks/useFragnances";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const FragrancesList = () => {
   const { data, isLoading, error } = useFragnaces();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

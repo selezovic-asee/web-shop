@@ -2,11 +2,14 @@ import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useBag from "../hooks/useBag";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const SkincareList = () => {
   const { data, isLoading, error } = useBag();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

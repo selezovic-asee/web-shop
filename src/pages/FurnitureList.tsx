@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useFurniture from "../hooks/useFurniture";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const FurnitureList = () => {
   const { data, isLoading, error } = useFurniture();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

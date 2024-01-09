@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useSunglasses from "../hooks/useSunglasses";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const JewelleryList = () => {
   const { data, isLoading, error } = useSunglasses();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

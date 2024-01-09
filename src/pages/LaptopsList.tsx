@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useLaptops from "../hooks/useLaptops";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const LaptopsList = () => {
   const { data, isLoading, error } = useLaptops();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>

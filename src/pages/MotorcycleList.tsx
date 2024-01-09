@@ -2,11 +2,14 @@ import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useMotorcycle from "../hooks/useMotorcycle";
 import "./Pages.css";
+import { useEffect } from "react";
 
 const MotorcycleList = () => {
   const { data, isLoading, error } = useMotorcycle();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
