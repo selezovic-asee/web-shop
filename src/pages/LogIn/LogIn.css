@@ -21,7 +21,7 @@
 .loginBoxSize {
     width: 600px;
     height: 250px;
-    animation: up-to-down 2s ease-in .2s forwards;
+    animation: up-to-down 2s ease-out .2s forwards;
 }
 
 @keyframes up-to-down {
