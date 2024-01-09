@@ -14,14 +14,14 @@
 }
 
 .loginBoxPosition {
-    height: 300px;
+    /* height: 300px; */
     padding-top: 5px;
 }
 
 .loginBoxSize {
     width: 600px;
     height: 250px;
-    animation: up-to-down 1s ease-in .2s forwards;
+    animation: up-to-down 2s ease-in .2s forwards;
 }
 
 @keyframes up-to-down {
