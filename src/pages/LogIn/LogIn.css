@@ -15,12 +15,19 @@
 
 .loginBoxPosition {
     height: 300px;
-    padding-top: 300px;
+    padding-top: 5px;
 }
 
 .loginBoxSize {
     width: 600px;
     height: 250px;
+    animation: up-to-down 1s ease-in .2s forwards;
+}
+
+@keyframes up-to-down {
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 @media all and (max-width: 425px) {

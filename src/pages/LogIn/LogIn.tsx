@@ -25,12 +25,7 @@ const LogIn = () => {
         )}
         {!profile ? (
           <div className="loginBoxPosition d-flex justify-content-center">
-            <div
-              className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white"
-              data-aos="zoom-in"
-              // data-aos-offset="500"
-              // data-aos-duration="2000"
-            >
+            <div className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white">
               <h2 className="contentLogIn pt-5">Login to the user account.</h2>
               <br />
               <br />
