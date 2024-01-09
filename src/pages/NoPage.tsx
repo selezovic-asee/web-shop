@@ -7,7 +7,7 @@ const NoPage = () => {
 
   return (
     <div>
-      <h3 className="noPageHeader d-flex justify-content-center align-items-center">
+      <h3 className="noPageHeader d-flex justify-content-center align-items-center text-center">
         The selected page does not exist, has been moved or deleted.
         <br />
         Make sure you have entered the correct address.

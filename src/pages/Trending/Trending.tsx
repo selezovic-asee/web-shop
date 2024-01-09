@@ -18,7 +18,7 @@ const Trending = () => {
         </div>
         <div
           className="trending d-flex justify-content-evenly"
-          data-aos="flip-up"
+          data-aos="zoom-in"
         >
           <a
             href="https://www.sportskeeda.com/gaming-tech/best-upcoming-phones-2024"
@@ -51,10 +51,11 @@ const Trending = () => {
           </p>
         </div>
         <hr />
-        <div className="d-flex flex-column align-items-start testimonials mt-5">
-          <div className="testimonialsHeader d-flex justify-content-center">
-            <h2 data-aos="fade-up">Testimonials</h2>
-          </div>
+        <div className="text-center mt-5">
+          <h2 data-aos="fade-up">Testimonials</h2>
+        </div>
+        <div className="d-flex flex-column align-items-start testimonials">
+          <div className="d-flex justify-content-center"></div>
           <div className="mt-auto">
             <Testimonials />
           </div>

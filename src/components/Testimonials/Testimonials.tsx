@@ -4,7 +4,7 @@ import "./Testimonials.css";
 const Testimonials = () => {
   return (
     <div className="cards d-flex align-items-start flex-column">
-      <Row md={2} xs={1} lg={3} className="g-5">
+      <Row md={2} xs={1} lg={3} className="g-0">
         <Col>
           <div className="cardTestimonials">
             <div className="cardTestimonials-content">

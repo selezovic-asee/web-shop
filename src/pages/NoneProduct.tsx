@@ -8,7 +8,7 @@ const NoneProduct = () => {
   window.scroll(0, 0);
 
   return (
-    <div className="noneProducts d-flex justify-content-center align-items-center">
+    <div className="noneProducts d-flex justify-content-center align-items-center text-center">
       <div>
         <h5>Sorry, we did not find any products for your search.</h5>
         <div className="d-flex justify-content-center">

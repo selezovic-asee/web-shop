@@ -34,7 +34,7 @@ const Website = () => {
             className="HeaderImg"
             src="imgs/homePage.jpg"
             alt="home page"
-            data-aos="zoom-in-left"
+            data-aos="zoom-in-down"
           />
         </div>
       </section>
@@ -67,7 +67,7 @@ const Website = () => {
             className="MainImg"
             src="imgs/ethical.jpg"
             alt="home page"
-            data-aos="zoom-in-left"
+            data-aos="zoom-in-down"
           />
         </article>
       </section>
@@ -80,7 +80,7 @@ const Website = () => {
             data-aos="zoom-in-right"
           />
 
-          <div className="feature__content" data-aos="fade-left">
+          <div className="feature__content" data-aos="fade-up">
             <h3 className="feature__heading">How we rate brands</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
@@ -117,7 +117,7 @@ const Website = () => {
             className="MainImg"
             src="imgs/brandDirectory.jpg"
             alt="home page"
-            data-aos="zoom-in-left"
+            data-aos="zoom-in-up"
           />
         </article>
       </div>

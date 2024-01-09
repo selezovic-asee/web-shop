@@ -23,7 +23,7 @@ const MotorcycleList = () => {
           <div className="spinner-border"></div>
         </div>
       )}
-      <Row md={2} xs={1} lg={3} className="g-3">
+      <Row md={2} xs={1} lg={3} className="g-0">
         {data.map((product) => (
           <Col key={product.id} className="my-5">
             {<StoreItem {...product} />}
