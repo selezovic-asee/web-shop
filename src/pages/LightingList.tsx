@@ -10,7 +10,7 @@ const LightingList = () => {
 
   return (
     <>
-      <h1 className="d-flex justify-content-center">Lighting</h1>
+      <h1 className="d-flex justify-content-center mb-5">Lighting</h1>
       <br />
       {error && (
         <p className="text-danger d-flex justify-content-center">{error}</p>

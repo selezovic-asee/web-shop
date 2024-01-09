@@ -42,7 +42,7 @@ const SearchInput = () => {
             <Input
               ref={ref}
               borderRadius={20}
-              placeholder="Search products..."
+              placeholder="Search..."
               variant="filled"
               width="7rem"
               className="pe-0"
@@ -68,7 +68,7 @@ const SearchInput = () => {
             <Input
               ref={ref}
               borderRadius={20}
-              placeholder="Search products..."
+              placeholder="Search..."
               variant="filled"
               width="20rem"
             />

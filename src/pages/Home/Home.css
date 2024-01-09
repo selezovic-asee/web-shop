@@ -378,16 +378,8 @@ a {
 
 /* Images */
 
-/* .MainImg {
-  border-radius: var(--border-radius);
-  width: 400px;
-} */
-
 .HeaderImg {
   border-radius: var(--border-radius);
-  /* width: 200px;
-  height: 200px; */
-  /* margin-top: 40px; */
 }
 
 @media screen and (max-width: 425px) {
