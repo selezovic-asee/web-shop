@@ -4,8 +4,11 @@ import { useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
+import useShoppingCart from "../../hooks/useShoppingCart";
 
 const Website = () => {
+  const { setInputValue } = useShoppingCart();
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -25,7 +28,11 @@ const Website = () => {
               Make your loved ones happy with beautiful gifts.
             </p>
             <Nav.Link to="/store" as={NavLink}>
-              <a href="#" className="HpBtn HpBtn--accent HpBtn--streched">
+              <a
+                href="#"
+                className="HpBtn HpBtn--accent HpBtn--streched"
+                onClick={() => setInputValue("")}
+              >
                 I'm ready to shop
               </a>
             </Nav.Link>
@@ -34,7 +41,7 @@ const Website = () => {
             className="HeaderImg"
             src="imgs/homePage.jpg"
             alt="home page"
-            data-aos="zoom-in-down"
+            data-aos="zoom-in"
           />
         </div>
       </section>

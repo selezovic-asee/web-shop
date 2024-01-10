@@ -71,6 +71,7 @@ const SearchInput = () => {
               placeholder="Search..."
               variant="filled"
               width="20rem"
+              onClick={() => setInputValue("")}
             />
           </InputGroup>
         </Nav.Link>
