@@ -8,6 +8,7 @@ import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
 import NoneProduct from "./NoneProduct";
 import "./Pages.css";
+// import SearchProduct from "./SearchProduct";
 
 const Store = () => {
   const { inputValue, categoryProduct, setExpanded } = useShoppingCart();
@@ -83,6 +84,7 @@ const Store = () => {
             ))}
           </Row>
         </>
+        // <SearchProduct />
       )}
       <footer className="HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">

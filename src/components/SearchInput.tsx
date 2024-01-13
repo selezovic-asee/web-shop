@@ -28,6 +28,7 @@ const SearchInput = () => {
   const handleSearchInput = () => {
     setInputValue("");
     setExpanded(false);
+    console.log("Empty");
   };
 
   return windowSize[0] < 768 ? (
@@ -52,6 +53,7 @@ const SearchInput = () => {
               variant="filled"
               width="7rem"
               className="pe-0"
+              onClick={() => setInputValue("")}
             />
           </InputGroup>
         </Nav.Link>
