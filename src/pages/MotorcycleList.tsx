@@ -3,16 +3,18 @@ import StoreItem from "../components/StoreItem/StoreItem";
 import useMotorcycle from "../hooks/useMotorcycle";
 import "./Pages.css";
 import { useEffect } from "react";
+import useShoppingCart from "../hooks/useShoppingCart";
 
 const MotorcycleList = () => {
   const { data, isLoading, error } = useMotorcycle();
+  const { setExpanded } = useShoppingCart();
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <h1 className="d-flex justify-content-center mt-5">Motorcycle</h1>
       <br />
       {error && (
@@ -133,7 +135,7 @@ const MotorcycleList = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

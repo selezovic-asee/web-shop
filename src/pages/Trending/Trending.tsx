@@ -2,16 +2,18 @@ import Aos from "aos";
 import { useEffect } from "react";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import "./Trending.css";
+import useShoppingCart from "../../hooks/useShoppingCart";
 
 const Trending = () => {
+  const { setExpanded } = useShoppingCart();
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
   }, []);
 
-  window.scroll(0, 0);
-
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <div className="trendingPageHeight">
         <div className="d-flex justify-content-center p-5">
           <h1 data-aos="fade-down">What's trending?</h1>
@@ -169,7 +171,7 @@ const Trending = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

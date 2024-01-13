@@ -1,12 +1,18 @@
 import { Button, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Pages.css";
+import useShoppingCart from "../hooks/useShoppingCart";
+import { useEffect } from "react";
 
 const NoPage = () => {
-  window.scroll(0, 0);
+  const { setExpanded } = useShoppingCart();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
-    <div>
+    <div onClick={() => setExpanded(false)}>
       <h3 className="noPageHeader d-flex justify-content-center align-items-center text-center">
         The selected page does not exist, has been moved or deleted.
         <br />

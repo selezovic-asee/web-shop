@@ -9,17 +9,16 @@ import "../Pages.css";
 import "./Registration.css";
 
 const Registration = () => {
-  const { profile, isLoading, setInputValue } = useShoppingCart();
+  const { profile, isLoading, setInputValue, setExpanded } = useShoppingCart();
   const isAuth = useAuth();
-
-  window.scroll(0, 0);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
   }, []);
 
   return isAuth ? (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <div className="registration d-flex justify-content-center">
         {isLoading && (
           <div className="isloadingPosition d-flex justify-content-center align-items-center">
@@ -142,7 +141,7 @@ const Registration = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   ) : (
     <Navigate to="/store" />
   );

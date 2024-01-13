@@ -22,6 +22,8 @@ interface ShoppingCartContextType {
   setInputValue: React.Dispatch<string>;
   categoryProduct: string;
   setCategoryProduct: React.Dispatch<string>;
+  expanded: boolean;
+  setExpanded: React.Dispatch<boolean>;
 }
 
 const ShoppingCartContext = React.createContext<ShoppingCartContextType>(

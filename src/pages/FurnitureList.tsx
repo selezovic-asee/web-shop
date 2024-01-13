@@ -3,16 +3,18 @@ import StoreItem from "../components/StoreItem/StoreItem";
 import useFurniture from "../hooks/useFurniture";
 import "./Pages.css";
 import { useEffect } from "react";
+import useShoppingCart from "../hooks/useShoppingCart";
 
 const FurnitureList = () => {
   const { data, isLoading, error } = useFurniture();
+  const { setExpanded } = useShoppingCart();
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <h1 className="d-flex justify-content-center mt-5">Furniture</h1>
       <br />
       {error && (
@@ -133,7 +135,7 @@ const FurnitureList = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

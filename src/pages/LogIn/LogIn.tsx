@@ -7,16 +7,15 @@ import useShoppingCart from "../../hooks/useShoppingCart";
 import "./LogIn.css";
 
 const LogIn = () => {
-  const { login, profile, isLoading } = useShoppingCart();
-
-  window.scroll(0, 0);
+  const { login, profile, isLoading, setExpanded } = useShoppingCart();
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <div className="bgLogIn">
         {isLoading && (
           <div className="isLoading d-flex justify-content-center align-items-center">
@@ -147,7 +146,7 @@ const LogIn = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

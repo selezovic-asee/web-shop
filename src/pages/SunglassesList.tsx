@@ -3,16 +3,18 @@ import StoreItem from "../components/StoreItem/StoreItem";
 import useSunglasses from "../hooks/useSunglasses";
 import "./Pages.css";
 import { useEffect } from "react";
+import useShoppingCart from "../hooks/useShoppingCart";
 
 const JewelleryList = () => {
   const { data, isLoading, error } = useSunglasses();
+  const { setExpanded } = useShoppingCart();
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <h1 className="d-flex justify-content-center mt-5">Sunglasses</h1>
       <br />
       {error && (
@@ -133,7 +135,7 @@ const JewelleryList = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

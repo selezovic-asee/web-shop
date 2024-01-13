@@ -7,16 +7,15 @@ import "./Home.css";
 import useShoppingCart from "../../hooks/useShoppingCart";
 
 const Website = () => {
-  const { setInputValue } = useShoppingCart();
+  const { setInputValue, setExpanded } = useShoppingCart();
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
   }, []);
 
-  window.scroll(0, 0);
-
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <section className="HpBlock HpBlock--dark HpBlock--skewed-left banner">
         <div className="container grid grid--1x2">
           <header
@@ -232,7 +231,7 @@ const Website = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

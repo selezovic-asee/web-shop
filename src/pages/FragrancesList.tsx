@@ -3,16 +3,18 @@ import StoreItem from "../components/StoreItem/StoreItem";
 import useFragnaces from "../hooks/useFragnances";
 import "./Pages.css";
 import { useEffect } from "react";
+import useShoppingCart from "../hooks/useShoppingCart";
 
 const FragrancesList = () => {
   const { data, isLoading, error } = useFragnaces();
+  const { setExpanded } = useShoppingCart();
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       <h1 className="d-flex justify-content-center mt-5">Fragnances</h1>
       <br />
       {error && (
@@ -133,7 +135,7 @@ const FragrancesList = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

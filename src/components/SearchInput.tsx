@@ -7,7 +7,7 @@ import useShoppingCart from "../hooks/useShoppingCart";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const { setInputValue } = useShoppingCart();
+  const { setInputValue, setExpanded } = useShoppingCart();
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
@@ -25,8 +25,14 @@ const SearchInput = () => {
     };
   }, []);
 
+  const handleSearchInput = () => {
+    setInputValue("");
+    setExpanded(false);
+  };
+
   return windowSize[0] < 768 ? (
     <form
+      onClick={() => handleSearchInput()}
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) {
@@ -53,6 +59,7 @@ const SearchInput = () => {
     </form>
   ) : (
     <form
+      onClick={() => handleSearchInput()}
       onSubmit={(event) => {
         event.preventDefault();
         if (ref.current) {

@@ -1,11 +1,14 @@
 import { Button, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useShoppingCart from "../hooks/useShoppingCart";
+import { useEffect } from "react";
 
 const NoneProduct = () => {
   const { setInputValue } = useShoppingCart();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <div className="noneProducts d-flex justify-content-center align-items-center text-center">

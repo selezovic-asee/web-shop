@@ -10,7 +10,7 @@ import NoneProduct from "./NoneProduct";
 import "./Pages.css";
 
 const Store = () => {
-  const { inputValue, categoryProduct } = useShoppingCart();
+  const { inputValue, categoryProduct, setExpanded } = useShoppingCart();
   const { data, error, isLoading } = useProducts();
   const {
     data: Data,
@@ -24,7 +24,7 @@ const Store = () => {
   }, []);
 
   return (
-    <>
+    <div onClick={() => setExpanded(false)}>
       {!inputValue ? (
         <>
           <h1
@@ -187,7 +187,7 @@ const Store = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
