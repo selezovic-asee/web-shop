@@ -60,7 +60,7 @@ const NavBar = () => {
         <Navbar.Brand onClick={() => setExpanded(false)}>
           <Nav>
             <Nav.Link to="/" as={NavLink}>
-              <img className="logoShop" src="logo/AGlogo.png" alt="logo" />
+              <img className="logoShop" src="logo/shopLogo.jpg" alt="logo" />
             </Nav.Link>
           </Nav>
         </Navbar.Brand>

@@ -223,7 +223,7 @@ a {
 /* Blocks */
 
 .HpBlock {
-  --padding-vertical: 3.1rem;
+  --padding-vertical: 2rem;
   padding: var(--padding-vertical) ;
 }
 
@@ -293,7 +293,6 @@ a {
 
 .footer {
   background: #232323;
-  /* padding-top: 6rem; */
 }
 
 .footer a {

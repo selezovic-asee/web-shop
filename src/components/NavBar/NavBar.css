@@ -25,8 +25,9 @@
 }
 
 .logoShop {
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 35px;
+    /* margin-left: 5px; */
 }
 
 .navbar {
