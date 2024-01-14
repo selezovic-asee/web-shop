@@ -16,7 +16,6 @@ import Registration from "./pages/Registration/Registration";
 import Store from "./pages/Store";
 import SunglassesList from "./pages/SunglassesList";
 import Trending from "./pages/Trending/Trending";
-import useShoppingCart from "./hooks/useShoppingCart";
 
 function App() {
   return (
