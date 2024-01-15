@@ -1,19 +1,22 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Button, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "./Pages.css";
 import useShoppingCart from "../hooks/useShoppingCart";
-import { useEffect } from "react";
+import "./Pages.css";
 
 const NoPage = () => {
   const { setExpanded } = useShoppingCart();
 
   useEffect(() => {
+    Aos.init({ duration: 1000 });
     window.scroll(0, 0);
   }, []);
 
   return (
     <div onClick={() => setExpanded(false)}>
-      <div className="noPage">
+      <div className="noPage" data-aos="zoom-in">
         <h3 className="noPageHeader d-flex justify-content-center align-items-center text-center">
           The selected page does not exist, has been moved or deleted.
           <br />

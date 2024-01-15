@@ -4,20 +4,13 @@ import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useProducts from "../hooks/useProducts";
-import useSearchInput from "../hooks/useSearchInput";
 import useShoppingCart from "../hooks/useShoppingCart";
-import NoneProduct from "./NoneProduct";
 import "./Pages.css";
-// import SearchProduct from "./SearchProduct";
+import SearchProduct from "./SearchProduct";
 
 const Store = () => {
-  const { inputValue, categoryProduct, setExpanded } = useShoppingCart();
+  const { inputValue, setExpanded } = useShoppingCart();
   const { data, error, isLoading } = useProducts();
-  const {
-    data: Data,
-    error: Error,
-    isLoading: IsLoading,
-  } = useSearchInput(inputValue);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -54,37 +47,8 @@ const Store = () => {
       ) : (
         <>
           <br />
-          {categoryProduct && Data.length > 0 ? (
-            <div className="d-flex justify-content-center">
-              <h5 className="mb-5">
-                You searched for...
-                <br />
-                <div className="d-flex justify-content-center">
-                  <span className="fw-bold fs-2">"{inputValue}"</span>
-                </div>
-              </h5>
-            </div>
-          ) : (
-            <NoneProduct />
-          )}
-          {Error && (
-            <p className="text-danger d-flex justify-content-center">{error}</p>
-          )}
-          {IsLoading && (
-            <div className="isloadingPosition d-flex justify-content-center align-items-center">
-              <div className="spinner-border"></div>
-            </div>
-          )}
-
-          <Row md={2} xs={1} lg={3} className="g-0">
-            {Data.map((product) => (
-              <Col key={product.id} className="my-5">
-                {<StoreItem {...product} />}
-              </Col>
-            ))}
-          </Row>
+          <SearchProduct />
         </>
-        // <SearchProduct />
       )}
       <footer className="HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">
