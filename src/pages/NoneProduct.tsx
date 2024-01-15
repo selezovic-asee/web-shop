@@ -11,16 +11,16 @@ const NoneProduct = () => {
   }, []);
 
   return (
-    <div className="noneProducts d-flex justify-content-center align-items-center text-center">
+    <div className="noneProducts">
+      <h5 className="headerNP">
+        Sorry, we did not find any products for your search.
+      </h5>
       <div>
-        <h5>Sorry, we did not find any products for your search.</h5>
-        <div className="d-flex justify-content-center">
-          <Nav>
-            <Nav.Link to="/store" as={NavLink}>
-              <Button onClick={() => setInputValue("")}>Go to shop!</Button>
-            </Nav.Link>
-          </Nav>
-        </div>
+        <Nav>
+          <Nav.Link to="/store" as={NavLink}>
+            <Button onClick={() => setInputValue("")}>Go to shop!</Button>
+          </Nav.Link>
+        </Nav>
       </div>
     </div>
   );

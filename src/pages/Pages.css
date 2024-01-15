@@ -1,10 +1,14 @@
 
+.headerNP {
+    text-align: center;
+}
+
 .isloadingPosition {
     height: 600px;
 }
 
 .noPageHeader{
-    height: 300px;
+    text-align: center;
 }
 
 .noPageFooter {
@@ -13,4 +17,17 @@
 
 .noneProducts {
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.noPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

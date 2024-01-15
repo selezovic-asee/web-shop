@@ -13,16 +13,18 @@ const NoPage = () => {
 
   return (
     <div onClick={() => setExpanded(false)}>
-      <h3 className="noPageHeader d-flex justify-content-center align-items-center text-center">
-        The selected page does not exist, has been moved or deleted.
-        <br />
-        Make sure you have entered the correct address.
-      </h3>
-      <Nav className="d-flex justify-content-center align-items-end">
-        <Nav.Link to="/" as={NavLink}>
-          <Button>Go to home page</Button>
-        </Nav.Link>
-      </Nav>
+      <div className="noPage">
+        <h3 className="noPageHeader d-flex justify-content-center align-items-center text-center">
+          The selected page does not exist, has been moved or deleted.
+          <br />
+          Make sure you have entered the correct address.
+        </h3>
+        <Nav className="d-flex justify-content-center align-items-end">
+          <Nav.Link to="/" as={NavLink}>
+            <Button>Go to home page</Button>
+          </Nav.Link>
+        </Nav>
+      </div>
       <footer className="HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">
           <section className="footer__section">
