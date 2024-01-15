@@ -24,10 +24,11 @@
 }
 
 .noPage {
-    height: 100vh;
+    height: 624px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
+
