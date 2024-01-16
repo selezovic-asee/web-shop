@@ -21,13 +21,17 @@ const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
     <Card className="card-item bg-light h-100">
       <Card.Img className="card-image" variant="top" src={imgUrl[0]} />
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+        <Card.Title className="d-flex justify-content-between align-items-baseline">
           <span className="fs-4">{title}</span>
           <span className="ms-2 text-muted">{formatCurrency(price)}</span>
         </Card.Title>
-        <div className="mt-auto">
+        <div className="mt-auto" style={{ height: "87px" }}>
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+            <Button
+              className="w-100"
+              onClick={() => increaseCartQuantity(id)}
+              style={{ marginTop: "30px" }}
+            >
               Add to cart
             </Button>
           ) : (

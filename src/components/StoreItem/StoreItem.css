@@ -32,5 +32,24 @@
     transform: scale(1.15);
     transition: transform 1s;
   }
+
+  @media screen and (min-width: 1461px) {
+    .card-item {
+      margin-left: 115px;
+    }
+  }
+  
+  @media screen and (min-width: 1461px) {
+    .card-item {
+      margin-left: 115px;
+    }
+  }
+  
+  @media screen and (min-width: 1461px) and (max-width: 1761px){
+    .card-item {
+      margin-left: 50px;
+    }
+  }
+  
   
   
