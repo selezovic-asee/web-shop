@@ -25,7 +25,7 @@ const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
           <span className="fs-4">{title}</span>
           <span className="ms-2 text-muted">{formatCurrency(price)}</span>
         </Card.Title>
-        <div className="mt-auto" style={{ height: "87px" }}>
+        <div className="cardLook mt-auto">
           {quantity === 0 ? (
             <Button
               className="w-100"

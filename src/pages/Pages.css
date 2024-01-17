@@ -1,7 +1,7 @@
 
 .headerNP {
-    text-align: center;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .isloadingPosition {
@@ -17,20 +17,20 @@
 }
 
 .noneProducts {
-    height: 600px;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 600px;
     justify-content: center;
-    align-items: center;
     padding-bottom: 230px;
 }
 
 .noPage {
-    height: 624px;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 624px;
     justify-content: center;
-    align-items: center;
     padding-bottom: 200px;
 }
 

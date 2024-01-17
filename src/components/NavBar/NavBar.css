@@ -1,16 +1,16 @@
 .indicator {
+    bottom: 0;
     color: white;
-    width: 1.5rem;
     height: 1.5rem;
     position: absolute;
     right: 0;
-    bottom: 0;
     transform: translate(25%, 25%);
+    width: 1.5rem;
 }
 
 .cart {
-    width: 48px;
     height: 48px;
+    width: 48px;
 }
 
 .cartIcon {
@@ -18,19 +18,19 @@
 }
 
 .dropdown-button {
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1200px;
     padding: 10px;
 }
 
 .image {
-    width: 30px;
     height: 30px;
+    width: 30px;
 }
 
 .logoShop {
-    width: 45px;
     height: 35px;
+    width: 45px;
 }
 
 .navbar {

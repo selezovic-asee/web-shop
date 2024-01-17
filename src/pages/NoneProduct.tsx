@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import { Button, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useShoppingCart from "../hooks/useShoppingCart";
-import { useEffect } from "react";
 import "./Pages.css";
 
 const NoneProduct = () => {

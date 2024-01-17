@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useFurniture from "../hooks/useFurniture";
-import "./Pages.css";
-import { useEffect } from "react";
 import useShoppingCart from "../hooks/useShoppingCart";
+import "./Pages.css";
 
 const FurnitureList = () => {
   const { data, isLoading, error } = useFurniture();

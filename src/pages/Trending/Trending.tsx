@@ -1,8 +1,8 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import "./Trending.css";
 import useShoppingCart from "../../hooks/useShoppingCart";
+import "./Trending.css";
 
 const Trending = () => {
   const { setExpanded } = useShoppingCart();

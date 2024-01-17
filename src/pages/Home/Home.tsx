@@ -3,8 +3,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "./Home.css";
 import useShoppingCart from "../../hooks/useShoppingCart";
+import "./Home.css";
 
 const Website = () => {
   const { setInputValue, setExpanded } = useShoppingCart();

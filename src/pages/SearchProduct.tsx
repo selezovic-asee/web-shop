@@ -10,7 +10,6 @@ import "./Pages.css";
 
 const SearchProduct = () => {
   const { inputValue, categoryProduct, setExpanded } = useShoppingCart();
-  // const { data, error, isLoading } = useProducts();
   const { data, error, isLoading } = useSearchInput(inputValue);
 
   useEffect(() => {

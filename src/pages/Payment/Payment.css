@@ -1,14 +1,14 @@
 
 .getStarted {
-    margin-top: 3.125rem ;
     margin-bottom: 2.5rem;
+    margin-top: 3.125rem ;
 }
 
 .loggedProfile {
-    width: 20rem;
     height: 3.75rem;
-    margin-top: .5rem;
     margin-bottom: 2.5rem;
+    margin-top: .5rem;
     padding-left: 1rem;
+    width: 20rem;
 }
 

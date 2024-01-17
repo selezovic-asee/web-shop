@@ -9,12 +9,12 @@
     box-shadow: 0 0 20px 30px gray;
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.5;
     margin: 1.5rem 2rem;
     max-width: 400px;
     overflow: hidden;
     transform: rotate(-5deg);
     transition: transform .2s;
-    line-height: 1.5;
   }
   
   .cardTestimonials-content p {
@@ -31,8 +31,8 @@
   
   .cardTestimonials-footer {
     align-items: center;
-    background: rgb(92, 191, 187);
     background: linear-gradient(90deg, rgba(92, 191, 187, 1) 0%, rgba(116, 214, 144, 1) 100%);
+    background: rgb(92, 191, 187);
     color: #fff;
     display: flex;
     font-weight: bold;

@@ -1,9 +1,9 @@
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import StoreItem from "../components/StoreItem/StoreItem";
 import useMotorcycle from "../hooks/useMotorcycle";
-import "./Pages.css";
-import { useEffect } from "react";
 import useShoppingCart from "../hooks/useShoppingCart";
+import "./Pages.css";
 
 const MotorcycleList = () => {
   const { data, isLoading, error } = useMotorcycle();

@@ -28,7 +28,6 @@ const SearchInput = () => {
   const handleSearchInput = () => {
     setInputValue("");
     setExpanded(false);
-    console.log("Empty");
   };
 
   return windowSize[0] < 400 ? (
