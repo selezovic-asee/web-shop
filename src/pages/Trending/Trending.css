@@ -34,31 +34,31 @@ hr {
     height: 1px;
 }
 
-@media screen and (max-width: 375px) {
-    .trendingPageHeight {
-        height: 3050px;
-    }
-}
-
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and  (max-width: 338px) {
     .trendingPageHeight {
         height: 2900px;
     }
 }
 
-@media screen and (min-width: 425px) and (max-width: 768px) {
+@media screen and (min-width: 339px) and (max-width: 425px) {
     .trendingPageHeight {
-        height: 2750px;
+        height: 2700px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 426px) and (max-width: 767px) {
     .trendingPageHeight {
-        height: 2000px;
+        height: 2550px;
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .trendingPageHeight {
+        height: 1950px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
     .trendingPageHeight {
         height: 1600px;
     }

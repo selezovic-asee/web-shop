@@ -9,7 +9,13 @@ interface Props {
 }
 
 const ShoppingCart = ({ isOpen }: Props) => {
-  const { closeCart, cartItems, data: products, profile } = useShoppingCart();
+  const {
+    closeCart,
+    cartItems,
+    data: products,
+    profile,
+    setInputValue,
+  } = useShoppingCart();
 
   const total = () => {
     return formatCurrency(
@@ -21,6 +27,11 @@ const ShoppingCart = ({ isOpen }: Props) => {
   };
 
   const cart = total();
+
+  const storeBtn = () => {
+    setInputValue("");
+    closeCart();
+  };
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -38,7 +49,13 @@ const ShoppingCart = ({ isOpen }: Props) => {
           <div className="ms-auto fw-bold fs-5">Total {cart}</div>
         </Stack>
         <Nav>
-          {!profile ? (
+          {cart === "$0.00" ? (
+            <Nav className="d-flex align-items-center">
+              <Nav.Link to="/store" as={NavLink}>
+                <Button onClick={() => storeBtn()}>Go to shop!</Button>
+              </Nav.Link>
+            </Nav>
+          ) : !profile ? (
             <Nav.Link to="/log-in" as={NavLink} onClick={() => closeCart()}>
               <Button>Complete your purchase.</Button>
             </Nav.Link>
