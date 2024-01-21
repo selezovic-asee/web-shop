@@ -59,3 +59,15 @@
       padding: 2rem 4rem;
     }
   }
+
+  @media screen and (min-width: 1461px) {
+    .cards {
+      margin-left: 115px;
+    }
+  }
+  
+  @media screen and (min-width: 1461px) and (max-width: 1761px){
+    .cards {
+      margin-left: 50px;
+    }
+  }
