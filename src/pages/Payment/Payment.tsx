@@ -8,13 +8,12 @@ import "./Payment.css";
 const Payment = () => {
   const { cartItems, data: products, profile } = useShoppingCart();
 
-  window.scroll(0, 0);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+    window.scroll(0, 0);
+  }, []);
 
   const subtotal = () => {
-    useEffect(() => {
-      Aos.init({ duration: 1000 });
-    }, []);
-
     return formatCurrency(
       cartItems.reduce((total, cartItem) => {
         const item = products.find((item) => item.id === cartItem.id);
