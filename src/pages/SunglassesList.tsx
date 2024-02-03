@@ -5,6 +5,7 @@ import useShoppingCart from "../hooks/useShoppingCart";
 import useSunglasses from "../hooks/useSunglasses";
 import "./Pages.css";
 
+// općenito liste su copy paste, to nije dobro, lijepo razdvoji kod, što je reusable stavi u reusable komponente, a što je specifično za svaku listu stavi u svaku listu, ovo kako si napravio ne valja
 const JewelleryList = () => {
   const { data, isLoading, error } = useSunglasses();
   const { setExpanded } = useShoppingCart();

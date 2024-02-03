@@ -14,6 +14,23 @@ const LogIn = () => {
     window.scroll(0, 0);
   }, []);
 
+  const renderProfile = () => <div className="loginBoxPosition d-flex justify-content-center">
+    <div className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white">
+      <h2 className="contentLogIn pt-5">Login to the user account.</h2>
+      <br />
+      <br />
+      <>
+        <p className="contentLogIn mb-1">
+          Registering allows you to make purchases/orders.
+        </p>
+        <br />
+        <Button id="login" onClick={() => login()}>
+          Sign in with Google
+        </Button>
+      </>
+    </div>
+  </div>;
+
   return (
     <div onClick={() => setExpanded(false)}>
       <div className="bgLogIn">
@@ -22,26 +39,9 @@ const LogIn = () => {
             <div className="spinner-border"></div>
           </div>
         )}
-        {!profile ? (
-          <div className="loginBoxPosition d-flex justify-content-center">
-            <div className="loginBoxSize d-flex align-items-center flex-column bg-primary border border-dark rounded-pill text-white">
-              <h2 className="contentLogIn pt-5">Login to the user account.</h2>
-              <br />
-              <br />
-              <>
-                <p className="contentLogIn mb-1">
-                  Registering allows you to make purchases/orders.
-                </p>
-                <br />
-                <Button id="login" onClick={() => login()}>
-                  Sign in with Google
-                </Button>
-              </>
-            </div>
-          </div>
-        ) : (
-          <Navigate to="/registration" />
-        )}
+        {/* veliki iif-ovi nisu baš idealni bolje to staviti u neku pomoćnu funkciju pa zvati nju ovo je nečitko */}
+        {/* puno čitkije */}
+        {!profile ? renderProfile() : <Navigate to="/registration" />}
       </div>
       <footer className="HpBlock HpBlock--dark footer">
         <div className="container grid footer__sections">
@@ -51,6 +51,7 @@ const LogIn = () => {
             </div>
             <div>
               <ul className="list">
+                {/* možda bi bolje bilo ovo stavljati u zasebne komponente */}
                 <li>
                   <a href="#">Furniture</a>
                 </li>

@@ -1,10 +1,11 @@
-
 .bgLogIn {
     background-image: url(../../../background/loginBg2.svg);
     background-attachment: fixed;
+    /* nemoj koristiti vh, istraži alterantive zbog mobilnih uređaja googlaj why you shouldn't use vh  */
     height: 100vh;
 }
 
+/* na css klase ide kebab case */
 .contentLogIn {
     color: #fff;
 }
@@ -32,6 +33,6 @@
 @media all and (max-width: 425px) {
     .contentLogIn {
         font-size: 12px;
-        
+
     }
 }

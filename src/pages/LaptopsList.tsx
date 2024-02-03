@@ -39,6 +39,7 @@ const LaptopsList = () => {
               <h2 className="footer__heading">Categories</h2>
             </div>
             <div>
+              {/* čini mi se kao da ovo ponavljaš cijelo vrijeme to je jako loše pod HITNO ISPRAVITI, ovoliko copy pasteanja nije nimalo dobro*/}
               <ul className="list">
                 <li>
                   <a href="#">Furniture</a>

@@ -14,6 +14,8 @@ const SkincareList = () => {
   }, []);
 
   return (
+
+    //handlari idu u useCallback
     <div onClick={() => setExpanded(false)}>
       <h1 className="d-flex justify-content-center mt-5">Bags</h1>
       <br />

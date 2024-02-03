@@ -24,6 +24,7 @@ const Website = () => {
           >
             <h1 className="HpBlock__heading">Welcome!</h1>
             <p className="HpBlock__paragraph banner__tagline">
+              {/* bilo bi super kada bi složio translatione */}
               Make your loved ones happy with beautiful gifts.
             </p>
             <Nav.Link to="/store" as={NavLink}>

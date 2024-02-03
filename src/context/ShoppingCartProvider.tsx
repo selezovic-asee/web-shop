@@ -9,6 +9,7 @@ interface Props {
   children: ReactNode;
 }
 
+//možda bolje da je provider u istom file-u kao i context
 const ShoppingCartProvider = ({ children }: Props) => {
   const { data, error, isLoading } = useProducts();
   const { login, logOut, profile, user } = useUserData();

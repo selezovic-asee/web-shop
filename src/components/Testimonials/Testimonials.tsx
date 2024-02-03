@@ -2,6 +2,8 @@ import { Col, Row } from "react-bootstrap";
 import "./Testimonials.css";
 
 const Testimonials = () => {
+
+  //fale zasebne komponente i neki map i ovakve stvari se dohvaćaju iz baze pa bi bilo zgodno da mockaš
   return (
     <div className="cards d-flex align-items-start flex-column">
       <Row md={2} xs={1} lg={3} className="g-0">

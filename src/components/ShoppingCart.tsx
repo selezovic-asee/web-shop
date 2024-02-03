@@ -4,6 +4,7 @@ import useShoppingCart from "../hooks/useShoppingCart";
 import formatCurrency from "../utilities/formatCurrency";
 import CartItem from "./CartItem/CartItem";
 
+//treba biti IShoppingCartProps
 interface Props {
   isOpen: boolean;
 }
@@ -26,8 +27,10 @@ const ShoppingCart = ({ isOpen }: Props) => {
     );
   };
 
+  //fali computed state
   const cart = total();
 
+  //false useCallback
   const storeBtn = () => {
     setInputValue("");
     closeCart();
@@ -49,6 +52,8 @@ const ShoppingCart = ({ isOpen }: Props) => {
           <div className="ms-auto fw-bold fs-5">Total {cart}</div>
         </Stack>
         <Nav>
+          {/*  === $0.00 nije dobro, uvijek trebaš imati jedinicu koja je samo broj i uvijek moraš moći dođi do nje ovo miješa display i logiku */}
+          {/* ovo ifanje izbjegavati potpuno je nečitko, bolje razbiti u više funkcija kako bi imao jasan flow */}
           {cart === "$0.00" ? (
             <Nav className="d-flex align-items-center">
               <Nav.Link to="/store" as={NavLink}>

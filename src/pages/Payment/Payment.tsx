@@ -13,6 +13,7 @@ const Payment = () => {
     window.scroll(0, 0);
   }, []);
 
+  //koristi za ovakve stvarionaj computed state
   const subtotal = () => {
     return formatCurrency(
       cartItems.reduce((total, cartItem) => {
@@ -21,6 +22,7 @@ const Payment = () => {
       }, 0)
     );
   };
+  //koristi za ovakve stvarionaj computed state
 
   const total = () => {
     return formatCurrency(
@@ -31,6 +33,7 @@ const Payment = () => {
     );
   };
 
+  // nisam gledao sve ali html ti je prevelik i nečitak, trebao bi ga podijeliti u manje komponente
   return (
     <>
       <div
@@ -115,6 +118,7 @@ const Payment = () => {
                             />
                           </div>
                         </div>
+                        {/* ovo mi se čini kao zasebna komponenta */}
                         <div className="col-lg-3">
                           <div className="mb-3">
                             <label className="form-label" htmlFor="code">
@@ -149,6 +153,7 @@ const Payment = () => {
                       </label>
                     </div>
                     <span>
+                      {/* svg mora biti u svom file-u ovo je putpono nečitko nema pojma nitko o čemu se radi */}
                       <svg
                         width="103"
                         height="25"

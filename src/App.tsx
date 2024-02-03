@@ -21,6 +21,8 @@ function App() {
   return (
     <ShoppingCartProvider>
       <NavBar />
+
+      {/* staviti rute u RouterOutlet componentu */}
       <div className="bg-white mb-4 p-0">
         <Routes>
           <Route path="/" element={<Home />} />

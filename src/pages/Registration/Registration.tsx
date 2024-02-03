@@ -17,6 +17,8 @@ const Registration = () => {
     window.scroll(0, 0);
   }, []);
 
+
+  // opet nečitko bolje staviti if(!isAuht) return <Navigate to="/store" /> i ispod nešto ovakvi inline ifovi nisu kul
   return isAuth ? (
     <div onClick={() => setExpanded(false)}>
       <div className="registration d-flex justify-content-center">

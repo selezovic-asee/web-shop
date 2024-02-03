@@ -4,6 +4,7 @@ import useShoppingCart from "../../hooks/useShoppingCart";
 import formatCurrency from "../../utilities/formatCurrency";
 import "./StoreItem.css";
 
+//ovo čak izgleda ok
 const StoreItem = ({ id, title, price, images: imgUrl, category }: Product) => {
   const {
     getItemQuantity,

@@ -13,6 +13,7 @@ const Trending = () => {
   }, []);
 
   return (
+    //handleri moraju ići kroz useCallback
     <div onClick={() => setExpanded(false)}>
       <div className="trendingPageHeight">
         <div className="d-flex justify-content-center p-5">
@@ -22,6 +23,8 @@ const Trending = () => {
           className="trending d-flex justify-content-evenly"
           data-aos="zoom-in"
         >
+
+          {/* ovo bi trebala biti komponenta */}
           <a
             href="https://www.sportskeeda.com/gaming-tech/best-upcoming-phones-2024"
             rel="noopener"
@@ -62,6 +65,8 @@ const Trending = () => {
             <Testimonials />
           </div>
         </div>
+
+        {/* stackanje br-ova je veliko ne */}
         <br />
         <br />
         <br />

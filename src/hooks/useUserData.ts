@@ -3,7 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const useUserData = () => {
-    const [user, setUser] = useState<any>([]);
+  //nemoj biti lijen mapirat usera na interface/objekt, nikad koristit any
+  const [user, setUser] = useState<any>([]);
   const [profile, setProfile] = useState<any | null>(null);
 
   const login = useGoogleLogin({
@@ -14,11 +15,17 @@ const useUserData = () => {
 
   useEffect(() => {
 
+    //generalno bolja praksa umjesto debelog if-a imati tanki !if
+    //dakle staviš if(!user) {return} tako izbjegneš jednu razine uvlačenja što je uvijek dobro
     if (user) {
       axios
         .get(
           `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
           {
+            //trebaš koristit queryParamse na ovaj način ako imaš mogućnost a ne u url-u iza upitinika
+            params: {
+              access_token: user.access_token
+            },
             headers: {
               Authorization: `Bearer ${user.access_token}`,
               Accept: "application/json",
@@ -27,17 +34,17 @@ const useUserData = () => {
         )
         .then((res) => setProfile(res.data))
         .catch((err) => console.log(err));
-        
-      }
-    }, [user]);
-    
+
+    }
+  }, [user]);
+
 
   const logOut = () => {
     googleLogout();
     setProfile(null);
   };
 
-  return { login, logOut, profile, user};
+  return { login, logOut, profile, user };
 }
 
 export default useUserData;

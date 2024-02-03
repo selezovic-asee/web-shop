@@ -1,9 +1,11 @@
 .cart-image {
-    height: 75px; 
+    height: 75px;
     object-fit: cover;
-    width: 125px; 
+    width: 125px;
 }
 
+/* fontovi ti trebaju biti konzistentni po cijeloj aplikaciji, googlaj kako se radi typography
+savjetujem isto da koristiš scss */
 .quantity-display {
     font-size: .65rem;
 }

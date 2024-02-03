@@ -20,7 +20,12 @@ const NavBar = () => {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
+    //fali as const ako je tuple u pitanju
   ]);
+
+
+  // ovo treba ići u zaseban hook, a možda najbolje u context providera da ima sharean state
+  // pixeli te ne bi trebali interesirati ti bi trebao imati definirano u objectu što je xs, sm, md, lg , xl i koje su vrijednosti i van bi trebao dobiti samo to
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -64,6 +69,18 @@ const NavBar = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Brand>
+        {/* U nastavku na komentar prije ovo staviti kao tipa lg ili tako nešto da je 990
+        nadalje renderiraš preko funkcije tako da imaš neki switch case ili lambda dict
+          switch(screenSize) {
+            case 'xl':
+              return <div>...</div>
+              itd
+              a ne ove inline ifove
+          }
+
+          drugo nikad ne koristiš windowSize[0] to nitko ne zna što je 
+          nego napraviš prije ovog koraka const [width] = windowSize i onda je čitko 
+        */}
         {windowSize[0] <= 991 && <SearchInput />}
         <div>
           {windowSize[0] <= 991 &&
@@ -123,6 +140,7 @@ const NavBar = () => {
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
               Category
             </Dropdown.Toggle>
+            {/*  možda ovo bubnut u array pa renderirat mapom opet handleri nisu u useCallbacku */}
             <Dropdown.Menu onClick={() => setInputValue("")}>
               <Dropdown.Item
                 to="/bag"
@@ -253,6 +271,7 @@ const NavBar = () => {
                 variant="outline-secondary"
                 className="rounded-circle mx-2"
               >
+                {/* Ovako koristit svg ne staviti u file */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
